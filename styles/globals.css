@@ -9,6 +9,12 @@ html {
   color: rgba(0, 0, 0, 0.8);
 }
 
+#__next {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 * {
   box-sizing: border-box;
 }
