@@ -5,4 +5,7 @@ module.exports = {
   images: {
     loader: "imgix",
   },
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    return config;
+  },
 };
