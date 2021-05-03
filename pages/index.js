@@ -1,22 +1,7 @@
 import Head from "next/head";
 import Page from "../components/Page";
-
-const ListItem = ({ icon, children }) => {
-  return (
-    <li data-icon={icon}>
-      <span>{children}</span>
-    </li>
-  );
-};
-
-const MarkupLink = ({ href }) => {
-  let cleanHref = href.startsWith("http") ? href : `https://${href}`;
-  return (
-    <a target="_blank" href={cleanHref}>
-      {href}
-    </a>
-  );
-};
+import ListItem from "../components/ListItem";
+import MarkupLink from "../components/MarkupLink";
 
 export default function Home() {
   return (
@@ -30,56 +15,62 @@ export default function Home() {
           <br />
           I’m Mario&minus;César Señoranis
         </h1>
+
         <p>
-          I’m a software developer, trying to write, create, and mostly being a
-          great father. I work at ⚡️
-          <MarkupLink href="zapier.com" /> as an Integration Software Engineer a
-          job that I love. I also spend some time in &nbsp;
-          <MarkupLink href="humanzilla.com" /> a two-person software agency with
-          my Wife.
+          I'm a software developer, trying to write, create, and mostly being a
+          great father. I work at ⚡️<MarkupLink>zapier.com</MarkupLink> as an
+          Integration Software Engineer, which I love and relish. I also work in{" "}
+          <MarkupLink>humanzilla.com</MarkupLink>, a small boutique two-person
+          software agency with my Wife.
         </p>
         <p>I grew up, live and work from Santa Cruz de la Sierra, Bolivia.</p>
         <p>And you’ve found my slice of the internet.</p>
         <p>You can also find me:</p>
+
         <ul role="list">
           <ListItem icon="🧑🏽‍💻">
-            Talking about work in LinkedIn &nbsp;
-            <MarkupLink href="linkedin.com/in/mariocesar/" />
+            Talking about work in LinkedIn&nbsp;
+            <MarkupLink>linkedin.com/in/mariocesar/</MarkupLink>
           </ListItem>
 
           <ListItem icon="📸">
-            Sharing pretty photos at Instagram &nbsp;
-            <MarkupLink href="instagram.com/mariocesar_bo/" />
+            Sharing pretty photos at Instagram&nbsp;
+            <MarkupLink>instagram.com/mariocesar_bo/</MarkupLink>
           </ListItem>
           <ListItem icon="🎉">
-            Speaking in Clubhouse &nbsp;
-            <MarkupLink href="joinclubhouse.com/@mariocesar" />
+            Speaking in Clubhouse&nbsp;
+            <MarkupLink>joinclubhouse.com/@mariocesar</MarkupLink>
             <ul role="list">
               <ListItem icon="☕">
                 I host a room in the club "Club del Desayuno" every day at 9 am
-                about Accountability and Networking. See &nbsp;
-                <MarkupLink href="joinclubhouse.com/club/club-del-desayuno" />
+                about Accountability and Networking.
+                <br />
+              </ListItem>
+              <ListItem icon="">
+                Go to&nbsp;
+                <MarkupLink>
+                  joinclubhouse.com/club/club-del-desayuno
+                </MarkupLink>
+                &nbsp;to participate.
               </ListItem>
             </ul>
           </ListItem>
           <ListItem icon="👾">
-            Sharing code in&nbsp;
-            <MarkupLink href="github.com/mariocesar" />, and projects like this
+            Sharing code and projects in&nbsp;
+            <MarkupLink>github.com/mariocesar</MarkupLink>, like this
             website&nbsp;
-            <MarkupLink href="github.com/mariocesar/mariocesar" />
+            <MarkupLink>github.com/mariocesar/mariocesar</MarkupLink>
             <ul role="list">
               <ListItem icon="📝">
-                <span>
-                  I have random and sometimes worthy bits of code unordered in
-                  &nbsp;
-                  <MarkupLink href="gist.github.com/mariocesar" />
-                </span>
+                I have random and sometimes worthy bits of code unordered in
+                &nbsp;
+                <MarkupLink>gist.github.com/mariocesar</MarkupLink>
               </ListItem>
             </ul>
           </ListItem>
           <ListItem icon="🐦">
-            Saying little in Twitter &nbsp;
-            <MarkupLink href="twitter.com/mariocesar_bo" />
+            Saying little in Twitter&nbsp;
+            <MarkupLink>twitter.com/mariocesar_bo</MarkupLink>
           </ListItem>
         </ul>
       </Page>
