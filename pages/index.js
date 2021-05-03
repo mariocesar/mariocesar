@@ -13,8 +13,8 @@ export default function Home() {
         <main>
           <h1>Hello, I’m Mario&minus;César Señoranis</h1>
           <p>
-            I’m a sofware developer, trying to writer, creator and mostly being
-            a great father.
+            I’m a software developer, trying to write, create and mostly being a
+            great father
           </p>
         </main>
       </div>
