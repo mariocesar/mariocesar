@@ -4,7 +4,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head itemType="http://schema.org/Blog" itemscope="">
+        <Head itemType="http://schema.org/Blog" itemScope="">
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <body>

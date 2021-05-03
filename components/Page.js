@@ -1,4 +1,5 @@
 import Head from "next/head";
+
 export default function Container({ children }) {
   return (
     <>
@@ -14,10 +15,8 @@ export default function Container({ children }) {
           content="python, bolivia, mariocesar, mariocesar_bo, zapier, software engineer"
         />
         <meta name="author" content="Mario-César Señoranis" />
-
         <link rel="canonical" itemProp="url" href="https://mariocesar.xyz/" />
         <link rel="author" href="https://mariocesar.xyz" />
-
         <meta
           property="og:title"
           content="Mario-César Señoranis Personal Website &amp; Blog"
@@ -29,11 +28,10 @@ export default function Container({ children }) {
           content="Mario-César Señoranis Personal Website &amp; Blog"
         />
         <meta property="og:type" content="blog" />
-
         <meta content="#ffffff" name="theme-color" />
         <meta content="#ffffff" name="msapplication-TileColor" />
       </Head>
-      <header></header>
+      <header />
       <main role="main">
         <div className="container">{children}</div>
       </main>

@@ -1,7 +1,7 @@
 import Head from "next/head";
-import Page from "../components/Page";
-import ListItem from "../components/ListItem";
-import MarkupLink from "../components/MarkupLink";
+import Page from "@/components/Page";
+import ListItem from "@/components/ListItem";
+import MarkupLink from "@/components/MarkupLink";
 
 export default function Home() {
   return (

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export && find out/ -type f -name \"*.html\" -exec html-beautify -r -c' ' -s1 --type html  --templating none -E span -w 120 {} \\; ",
+    "build": "next build && next export ",
     "start": "next start"
   },
   "dependencies": {
