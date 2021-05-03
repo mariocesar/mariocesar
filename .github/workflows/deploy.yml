@@ -23,10 +23,11 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-node-
 
-    - env:
+    - name: Install deps and build
+      env:
         NODE_ENV: production
       run: |
-        npm install --no-save --no-audit
+        npm install --no-save --no-audit --frozen-lockfile
         npm run build
 
     - name: Deploy
@@ -34,3 +35,4 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./out
+        cname: mariocesar.xyz
