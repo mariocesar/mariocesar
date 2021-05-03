@@ -10,10 +10,17 @@ And you’ve found my slice of the internet.
 You can also find me:
 
 - 🧑🏽‍💻 Talking about work in LinkedIn https://linkedin.com/in/mariocesar/
+
 - 📸 Sharing pretty photos at Instagram https://instagram.com/mariocesar_bo/
+
 - 🎉 Speaking in Clubhouse https://joinclubhouse.com/@mariocesar
+
   - ☕️ I host a room in the club "Club del Desayuno" every day at 9 am about Accountability and Networking.
+    
     Go to https://joinclubhouse.com/club/club-del-desayuno to participate.
+
 - 👾 Sharing code and projects in https://github.com/mariocesar, like this website https://github.com/mariocesar/mariocesar
+
   - 📝 I have random and sometimes worthy bits of code unordered in https://gist.github.com/mariocesar
+
 - 🐦 Saying little in Twitter https://twitter.com/mariocesar_bo
