@@ -8,6 +8,10 @@ export default function Home() {
     <>
       <Head>
         <title>Mario-César Señoranis</title>
+        <meta
+          name="google-site-verification"
+          content="CPziVTiDUu4mYTO0W7b63PVGE2YKC5lp7Uz-XiIkEWs"
+        />
       </Head>
       <Page role="main">
         <h1>
