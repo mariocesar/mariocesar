@@ -9,11 +9,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+
     - name: Use Node.js
       uses: actions/setup-node@v2
     
     - run: npm install
-    - run: npm build
+
+    - name: Cache
+      uses: actions/cache@v2.1.5
+      with:
+        path: node_modules/
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+
+    - run: npm run build
     - run: ls -al out/
 
     - name: Deploy
