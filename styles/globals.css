@@ -60,7 +60,12 @@ a {
   text-underline-offset: 0.1875em;
   cursor: pointer;
   color: #111111;
-  white-space: nowrap;
+}
+
+@media only screen and (min-width: 50rem) {
+  a {
+    white-space: nowrap;
+  }
 }
 
 a:hover,
@@ -78,7 +83,7 @@ a:active {
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  max-width: 48rem;
+  max-width: 50rem;
   margin: 0 auto;
   padding: 0 2rem;
 }
