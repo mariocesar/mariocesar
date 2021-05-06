@@ -1,7 +1,23 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
+  static async getInitialProps(ctx) {
+    const initialProps = await Document.getInitialProps(ctx);
+
+    return {
+      ...initialProps,
+      extraScript: `
+        Array.prototype.slice.call(document.querySelectorAll("a[href^=http]")).map((el)=> {
+          el.setAttribute("target", "_blank");
+          el.setAttribute("title", el.href);
+          el.setAttribute("rel", "noopener");
+        });
+      `,
+    };
+  }
+
   render() {
+    const { extraScript } = this.props;
     return (
       <Html lang="en">
         <Head itemType="http://schema.org/Blog" itemScope="">
@@ -14,6 +30,7 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <script dangerouslySetInnerHTML={{ __html: extraScript }} />
         </body>
       </Html>
     );

@@ -23,7 +23,7 @@ body {
     "Helvetica", "Apple Color Emoji", "Arial", "Segoe UI Emoji",
     "Segoe UI Symbol", sans-serif;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.66;
   letter-spacing: -0.2px;
   color: #1d2d35;
   -moz-font-feature-settings: "kern";
@@ -33,6 +33,7 @@ body {
 html,
 body,
 ul,
+li,
 p {
   margin: 0;
   padding: 0;
@@ -44,44 +45,53 @@ p {
   min-height: 100vh;
 }
 
-h1 {
+.markdown {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.markdown h1 {
   margin-top: 1rem;
   margin-bottom: 2rem;
   font-weight: 800;
-  font-size: 3rem;
-  line-height: 1.25;
+  font-size: 2.5rem;
+  line-height: 1.35;
   letter-spacing: -0.025em;
 }
 
-p {
-  margin-bottom: 1rem;
-}
-
-ul {
-  list-style: none; /* Remove list bullets */
-  display: block;
-}
-
 @media only screen and (min-width: 50rem) {
-  ul {
-    margin: 0 1rem;
+  .markdown h1 {
+    font-size: 3rem;
   }
 }
 
-ul ul {
-  margin: 0.5rem 0 1rem 0;
+.markdown p,
+.markdown ul > li {
+  margin-bottom: 1.25rem;
 }
 
-li {
-  display: grid;
-  grid-template-columns: 0 1fr;
-  grid-gap: 1.75em;
-  align-items: start;
-  margin-bottom: 0.5rem;
+.markdown ul {
+  margin-top: 0;
+  list-style: none;
+  position: relative;
+  padding-left: 1em;
+  padding-right: 0;
 }
 
-ul li::before {
-  content: attr(data-icon);
+.markdown ul > li:before {
+  position: absolute;
+  left: 0.5em;
+  color: rgba(0, 0, 0, 0.5);
+  content: "\2014";
+  width: 1em;
+  margin-left: 0;
+}
+
+@media only screen and (min-width: 50rem) {
+  .markdown ul {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
 }
 
 a {
@@ -94,13 +104,6 @@ a {
   transition: color 100ms ease-in;
 }
 
-@media only screen and (min-width: 50rem) {
-  a {
-    white-space: nowrap;
-    word-break: normal;
-  }
-}
-
 a:hover,
 a:active {
   color: #333;
@@ -111,16 +114,31 @@ a:focus {
   outline: thin dotted;
 }
 
+@media only screen and (min-width: 50rem) {
+  a {
+    white-space: nowrap;
+    word-break: normal;
+  }
+}
+
+/* Layout */
+
 header {
-  height: 5rem;
+  height: 1rem;
+}
+
+@media only screen and (min-width: 50rem) {
+  header {
+    height: 2rem;
+  }
 }
 
 .main {
   max-width: 100%;
 }
 
-.container > p:hover,
-.container > ul > li:hover {
+.container article > p:hover,
+.container article > ul > li:hover {
   background: rgba(0, 0, 0, 0.033);
   transition: background-color 400ms ease-out;
 }

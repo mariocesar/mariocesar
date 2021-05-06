@@ -1,83 +1,27 @@
 import Head from "next/head";
 import Page from "@/components/Page";
-import ListItem from "@/components/ListItem";
-import MarkupLink from "@/components/MarkupLink";
+import { readMarkdownFileConvertToHTML } from "@/lib/markdown";
 
-export default function Home() {
+export async function getStaticProps() {
+  const { data, content } = await readMarkdownFileConvertToHTML("README.md");
+  return { props: { title: data.Title, content } };
+}
+
+export default function Home({ title, content }) {
   return (
     <>
       <Head>
-        <title>Mario-César Señoranis</title>
+        <title>{title}</title>
         <meta
           name="google-site-verification"
           content="CPziVTiDUu4mYTO0W7b63PVGE2YKC5lp7Uz-XiIkEWs"
         />
       </Head>
       <Page role="main">
-        <h1>
-          👋🏼 Hello,
-          <br />
-          I’m Mario&minus;César Señoranis
-        </h1>
-
-        <p>
-          I'm a software developer, trying to write, create, and mostly being a
-          great father. I work at ⚡️<MarkupLink>zapier.com</MarkupLink> as an
-          Integration Software Engineer. I also work in&nbsp;
-          <MarkupLink>humanzilla.com</MarkupLink>, a small boutique two-person
-          software agency with my Wife.
-        </p>
-        <p>I grew up, live and work from Santa Cruz de la Sierra, Bolivia.</p>
-        <p>And you’ve found my slice of the internet.</p>
-        <p>You can also find me:</p>
-
-        <ul role="list">
-          <ListItem icon="🧑🏽‍💻">
-            Talking about work at LinkedIn&nbsp;
-            <MarkupLink>linkedin.com/in/mariocesar/</MarkupLink>
-          </ListItem>
-
-          <ListItem icon="📸">
-            Sharing pretty photos at Instagram&nbsp;
-            <MarkupLink>instagram.com/mariocesar_bo/</MarkupLink>
-          </ListItem>
-          <ListItem icon="🎉">
-            Speaking in Clubhouse&nbsp;
-            <MarkupLink>joinclubhouse.com/@mariocesar</MarkupLink>
-            <ul role="list">
-              <ListItem icon="☕">
-                Where I host a daily room at the club&nbsp;
-                <em>"Club del Desayuno"</em> every day at 9 am about
-                Accountability and Networking.
-                <br />
-              </ListItem>
-              <ListItem icon="">
-                Go to&nbsp;
-                <MarkupLink>
-                  joinclubhouse.com/club/club-del-desayuno
-                </MarkupLink>
-                &nbsp;to participate.
-              </ListItem>
-            </ul>
-          </ListItem>
-          <ListItem icon="👾">
-            Sharing code and projects in&nbsp;
-            <MarkupLink>github.com/mariocesar</MarkupLink>, like this same
-            website&nbsp;
-            <MarkupLink>github.com/mariocesar/mariocesar</MarkupLink>
-            <ul role="list">
-              <ListItem icon="📝">
-                I post without a particular order useful bits of code at&nbsp;
-                <MarkupLink>gist.github.com/mariocesar</MarkupLink> that are
-                sometimes worthy of looking at.
-              </ListItem>
-            </ul>
-          </ListItem>
-          <ListItem icon="🐦">
-            Saying little in Twitter&nbsp;
-            <MarkupLink>twitter.com/mariocesar_bo</MarkupLink>
-          </ListItem>
-        </ul>
+        <article
+          className="markdown"
+          dangerouslySetInnerHTML={{ __html: content }}
+        />
       </Page>
     </>
   );

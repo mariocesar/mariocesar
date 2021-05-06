@@ -1,4 +1,10 @@
-I'm a software developer trying to write more, create software, and mostly try hard to be a great Dad. I work at ⚡️ [zapier.com](https://zapier.com/) as an Integration Software Engineer. I also work in [humanzilla.com](https://humanzilla.com), a small boutique two-person software agency with my Wife.
+---
+Title: Mario−César Señoranis
+---
+
+# 👋🏼 Hello,<br/> I’m Mario−César Señoranis
+
+I'm a software developer trying to write more, create software, and being a good Dad. Work at ⚡️ [zapier.com](https://zapier.com/) as an Integration Software Engineer. I also work in [humanzilla.com](https://humanzilla.com), a small two-person software agency with my Wife.
 
 I grew up, live and work from Santa Cruz de la Sierra, Bolivia.
 
@@ -11,9 +17,9 @@ You can also find me:
 - 📸 Sharing pretty photos at Instagram [instagram.com/mariocesar_bo](https://instagram.com/mariocesar_bo/)
 
 - 🎙 Speaking in Clubhouse [joinclubhouse.com/@mariocesar](https://joinclubhouse.com/@mariocesar)
-	
+
   ☕️ I host a daily room at the club "Club del Desayuno" every day at 9 am about Accountability and Networking.
-	
+
   🎉 Go to [joinclubhouse.com/club/club-del-desayuno](https://joinclubhouse.com/club/club-del-desayuno) to participate.
 
 - ⌨️ Sharing code and projects in [github.com/mariocesar](https://github.com/mariocesar), like this same website [github.com/mariocesar/mariocesar](https://github.com/mariocesar/mariocesar)
