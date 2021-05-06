@@ -1,26 +1,23 @@
-
-## 👋🏼 Hello, I’m Mario−César Señoranis
-
-I'm a software developer, trying to write, create, and mostly being a great father. I work at ⚡️zapier.com as an Integration Software Engineer, which I love and relish. I also work in humanzilla.com, a small boutique two-person software agency with my Wife.
+I'm a software developer trying to write more, create software, and mostly try hard to be a great Dad. I work at ⚡️ zapier.com as an Integration Software Engineer. I also work in humanzilla.com, a small boutique two-person software agency with my Wife.
 
 I grew up, live and work from Santa Cruz de la Sierra, Bolivia.
 
-And you’ve found my slice of the internet.
+And you've found my slice of the internet.
 
 You can also find me:
 
-- 🧑🏽‍💻 Talking about work in LinkedIn https://linkedin.com/in/mariocesar/
+- 🧑🏽‍💻 Talking about work at LinkedIn [linkedin.com/in/mariocesar](https://linkedin.com/in/mariocesar/)
 
-- 📸 Sharing pretty photos at Instagram https://instagram.com/mariocesar_bo/
+- 📸 Sharing pretty photos at Instagram [instagram.com/mariocesar_bo](https://instagram.com/mariocesar_bo/)
 
-- 🎉 Speaking in Clubhouse https://joinclubhouse.com/@mariocesar
+- 🎙 Speaking in Clubhouse [joinclubhouse.com/@mariocesar](https://joinclubhouse.com/@mariocesar)
+	
+  ☕️ I host a daily room at the club "Club del Desayuno" every day at 9 am about Accountability and Networking.
+	
+  🎉 Go to [joinclubhouse.com/club/club-del-desayuno](https://joinclubhouse.com/club/club-del-desayuno) to participate.
 
-  - ☕️ I host a room in the club "Club del Desayuno" every day at 9 am about Accountability and Networking.
-    
-    Go to https://joinclubhouse.com/club/club-del-desayuno to participate.
+- ⌨️ Sharing code and projects in [github.com/mariocesar](https://github.com/mariocesar), like this same website [github.com/mariocesar/mariocesar](https://github.com/mariocesar/mariocesar)
 
-- 👾 Sharing code and projects in https://github.com/mariocesar, like this website https://github.com/mariocesar/mariocesar
+  🗒 I post without a particular order helpful bits of code at [gist.github.com/mariocesar](https://gist.github.com/mariocesar) that are sometimes worthy of looking at.
 
-  - 📝 I have random and sometimes worthy bits of code unordered in https://gist.github.com/mariocesar
-
-- 🐦 Saying little in Twitter https://twitter.com/mariocesar_bo
+- 🐦 Saying little in Twitter [twitter.com/mariocesar_bo](https://twitter.com/mariocesar_bo)
