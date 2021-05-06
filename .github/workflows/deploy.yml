@@ -30,7 +30,7 @@ jobs:
         set -eux
         npm ci
         npm run build
-        find out -name "*.html" -exec npx prettier --print-width 120 --parser html {} \;
+        find out -name "*.html" -exec npx prettier --print-width 120 --write --parser html {} \;
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
