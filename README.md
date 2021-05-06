@@ -1,4 +1,4 @@
-I'm a software developer trying to write more, create software, and mostly try hard to be a great Dad. I work at ⚡️ zapier.com as an Integration Software Engineer. I also work in humanzilla.com, a small boutique two-person software agency with my Wife.
+I'm a software developer trying to write more, create software, and mostly try hard to be a great Dad. I work at ⚡️ [zapier.com](https://zapier.com/) as an Integration Software Engineer. I also work in [humanzilla.com](https://humanzilla.com), a small boutique two-person software agency with my Wife.
 
 I grew up, live and work from Santa Cruz de la Sierra, Bolivia.
 
