@@ -4,7 +4,13 @@ export default function MarkupLink({ children, title }) {
     : `https://${children.toString().trim()}`;
 
   return (
-    <a target="_blank" title={title || cleanHref} href={cleanHref}>
+    <a
+      target="_blank"
+      rel="noopener"
+      tabindex="0"
+      title={title || cleanHref}
+      href={cleanHref}
+    >
       {children.toString().trim()}
     </a>
   );

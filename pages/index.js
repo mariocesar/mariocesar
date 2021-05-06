@@ -23,7 +23,7 @@ export default function Home() {
         <p>
           I'm a software developer, trying to write, create, and mostly being a
           great father. I work at ⚡️<MarkupLink>zapier.com</MarkupLink> as an
-          Integration Software Engineer, which I love and relish. I also work in{" "}
+          Integration Software Engineer. I also work in{" "}
           <MarkupLink>humanzilla.com</MarkupLink>, a small boutique two-person
           software agency with my Wife.
         </p>
@@ -33,7 +33,7 @@ export default function Home() {
 
         <ul role="list">
           <ListItem icon="🧑🏽‍💻">
-            Talking about work in LinkedIn&nbsp;
+            Talking about work at LinkedIn&nbsp;
             <MarkupLink>linkedin.com/in/mariocesar/</MarkupLink>
           </ListItem>
 
@@ -46,8 +46,9 @@ export default function Home() {
             <MarkupLink>joinclubhouse.com/@mariocesar</MarkupLink>
             <ul role="list">
               <ListItem icon="☕">
-                I host a room in the club "Club del Desayuno" every day at 9 am
-                about Accountability and Networking.
+                Where I host a daily room at the club{" "}
+                <em>"Club del Desayuno"</em> every day at 9 am about
+                Accountability and Networking.
                 <br />
               </ListItem>
               <ListItem icon="">
