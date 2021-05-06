@@ -1,10 +1,10 @@
-import Head from "next/head";
-import Page from "@/components/Page";
-import { readMarkdownFileConvertToHTML } from "@/lib/markdown";
+import Head from 'next/head'
+import Page from '@/components/Page'
+import { readMarkdownFileConvertToHTML } from '@/lib/markdown'
 
 export async function getStaticProps() {
-  const { data, content } = await readMarkdownFileConvertToHTML("README.md");
-  return { props: { title: data.Title, content } };
+  const { data, content } = await readMarkdownFileConvertToHTML('README.md')
+  return { props: { title: data.Title, content } }
 }
 
 export default function Home({ title, content }) {
@@ -24,5 +24,5 @@ export default function Home({ title, content }) {
         />
       </Page>
     </>
-  );
+  )
 }

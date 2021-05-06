@@ -74,23 +74,27 @@ p {
   margin-top: 0;
   list-style: none;
   position: relative;
-  padding-left: 1em;
+  padding-left: 1.5em;
   padding-right: 0;
 }
 
 .markdown ul > li:before {
   position: absolute;
-  left: 0.5em;
+  left: 0em;
   color: rgba(0, 0, 0, 0.5);
   content: "\2014";
-  width: 1em;
+  width: 1.5em;
   margin-left: 0;
+  text-align: center;
 }
 
 @media only screen and (min-width: 50rem) {
   .markdown ul {
     padding-left: 2em;
     padding-right: 2em;
+  }
+  .markdown ul > li:before {
+    left: 0.25em;
   }
 }
 
