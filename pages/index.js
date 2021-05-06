@@ -23,7 +23,7 @@ export default function Home() {
         <p>
           I'm a software developer, trying to write, create, and mostly being a
           great father. I work at ⚡️<MarkupLink>zapier.com</MarkupLink> as an
-          Integration Software Engineer. I also work in{" "}
+          Integration Software Engineer. I also work in &nbsp;
           <MarkupLink>humanzilla.com</MarkupLink>, a small boutique two-person
           software agency with my Wife.
         </p>
