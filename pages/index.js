@@ -24,7 +24,7 @@ export default function Home({ title, content }) {
         />
       </Page>
       <script
-        dangerouslySetInnerHTML={{ __html: "mixpanel.track('Viewed Landing')" }}
+        dangerouslySetInnerHTML={{ __html: "mixpanel.track('Page viewed')" }}
       />
     </>
   )
