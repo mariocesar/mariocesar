@@ -27,5 +27,4 @@ You can also find me:
   🗒 I post without a particular order helpful bits of code at [gist.github.com/mariocesar](https://gist.github.com/mariocesar) that are sometimes worthy of looking at.
 
 - 🐦 Saying little in Twitter [twitter.com/mariocesar_bo](https://twitter.com/mariocesar_bo)
-# demo-positive-news
-# demo-positive-news
+
