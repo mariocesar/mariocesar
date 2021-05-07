@@ -11,6 +11,7 @@ class MyDocument extends Document {
 
     const trackExternalLinks = `
       mixpanel.track_links("a[href^=http][target=_blank]", "External Link clicked");
+      mixpanel.track('Page viewed');
     `
 
     return (
