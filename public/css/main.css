@@ -39,18 +39,18 @@ p {
   padding: 0;
 }
 
-#__next {
+.root {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-.markdown {
+article {
   margin-right: auto;
   margin-left: auto;
 }
 
-.markdown h1 {
+article h1 {
   margin-top: 1rem;
   margin-bottom: 2rem;
   font-weight: 800;
@@ -60,17 +60,17 @@ p {
 }
 
 @media only screen and (min-width: 50rem) {
-  .markdown h1 {
+  article h1 {
     font-size: 3rem;
   }
 }
 
-.markdown p,
-.markdown ul > li {
+article p,
+article ul > li {
   margin-bottom: 1.25rem;
 }
 
-.markdown ul {
+article ul {
   margin-top: 0;
   list-style: none;
   position: relative;
@@ -78,7 +78,7 @@ p {
   padding-right: 0;
 }
 
-.markdown ul > li:before {
+article ul > li:before {
   position: absolute;
   left: 0em;
   color: rgba(0, 0, 0, 0.5);
@@ -89,11 +89,11 @@ p {
 }
 
 @media only screen and (min-width: 50rem) {
-  .markdown ul {
+  article ul {
     padding-left: 2em;
     padding-right: 2em;
   }
-  .markdown ul > li:before {
+  article ul > li:before {
     left: 0.25em;
   }
 }
@@ -156,4 +156,22 @@ header {
   margin: 0 auto;
   padding: 0 2rem;
   margin-bottom: 4rem;
+}
+
+.container {
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 42rem;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.main {
+  padding: 5rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }

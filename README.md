@@ -1,5 +1,5 @@
----
-Title: Mario−César Señoranis
+title: Mario−César Señoranis
+description: I’m a software developer here is my Personal site and Blog
 ---
 
 # 👋🏼 Hello,<br/> I’m Mario−César Señoranis
@@ -27,4 +27,3 @@ You can also find me:
   🗒 I post without a particular order helpful bits of code at [gist.github.com/mariocesar](https://gist.github.com/mariocesar) that are sometimes worthy of looking at.
 
 - 🐦 Saying little in Twitter [twitter.com/mariocesar_bo](https://twitter.com/mariocesar_bo)
-
