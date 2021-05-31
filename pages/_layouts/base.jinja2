@@ -9,11 +9,15 @@
     <meta content="#ffffff" name="theme-color" />
     <meta content="#ffffff" name="msapplication-TileColor" />
     <link rel="stylesheet" href="css/main.css" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B4MFBP94Q5"></script>
     <script>
-        <!-- Quickly update the support of JS from the browser -->
-        (function (el) {
-            el.className = el.className.replace('no-js', ' ')
-        })(document.getElementsByTagName("html")[0])
+        (function (el) {el.className = el.className.replace('no-js', ' ')})(document.getElementsByTagName('html')[0])
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-B4MFBP94Q5');
     </script>
     {% block extrahead %}{% endblock %}
 </head>
@@ -26,5 +30,21 @@
         </div>
     </main>
 </div>
+<script>
+    gtag(function(tracker) {
+        Array.prototype.slice.call(document.querySelectorAll("a[href^=http]")).map((el)=> {
+            el.onclick = function(event) {
+                event.preventDefault();
+                gtag(
+                    'send', 'event', 'outbound', 'click', el.href,
+                    {'hitCallback': function(){document.location = el.href;}},
+                    {'nonInteraction': 1}
+                )
+                return false
+            };
+            console.log("Added event tracking for outbound links.")
+        });
+    });
+</script>
 </body>
 </html>
