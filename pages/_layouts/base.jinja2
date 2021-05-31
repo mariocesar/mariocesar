@@ -30,21 +30,5 @@
         </div>
     </main>
 </div>
-<script>
-    gtag(function(tracker) {
-        Array.prototype.slice.call(document.querySelectorAll("a[href^=http]")).map((el)=> {
-            el.onclick = function(event) {
-                event.preventDefault();
-                gtag(
-                    'send', 'event', 'outbound', 'click', el.href,
-                    {'hitCallback': function(){document.location = el.href;}},
-                    {'nonInteraction': 1}
-                )
-                return false
-            };
-            console.log("Added event tracking for outbound links.")
-        });
-    });
-</script>
 </body>
 </html>
