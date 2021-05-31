@@ -5,21 +5,12 @@ import xml.etree.ElementTree as etree
 from dataclasses import dataclass
 from functools import wraps
 from pathlib import Path
-from typing import (
-    Generator,
-    Any,
-    Union,
-    List,
-    Iterator,
-    Dict,
-    Optional,
-    Callable,
-)
+from typing import Any, Callable, Dict, Generator, Iterator, List, Optional, Union
 
 import jinja2
 import markdown
 import yaml
-from markdown.inlinepatterns import LinkInlineProcessor, LINK_RE
+from markdown.inlinepatterns import LINK_RE, LinkInlineProcessor
 from markdown.serializers import _escape_attrib_html
 
 RootDir = Path(__file__).parent
@@ -246,9 +237,7 @@ def load(path: Path):
 
 
 def render_attrs(obj: Dict[str, str]) -> str:
-    return " ".join(
-        f'{key}="{_escape_attrib_html(value)}"' for key, value in obj.items()
-    )
+    return " ".join(f'{key}="{_escape_attrib_html(value)}"' for key, value in obj.items())
 
 
 def grep(match_pattern: str):
