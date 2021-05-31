@@ -1,260 +1,104 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head itemtype="http://schema.org/Blog">
-    <link
-      rel="shortcut icon"
-      type="image/svg+xml"
-      href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text y=%22.9em%22 font-size=%2290%22&gt;👋🏼&lt;/text&gt;&lt;/svg&gt;"
-    />
-    <script>
-      ;(function (f, b) {
-        if (!b.__SV) {
-          var e, g, i, h
-          window.mixpanel = b
-          b._i = []
-          b.init = function (e, f, c) {
-            function g(a, d) {
-              var b = d.split('.')
-              2 == b.length && ((a = a[b[0]]), (d = b[1]))
-              a[d] = function () {
-                a.push([d].concat(Array.prototype.slice.call(arguments, 0)))
-              }
-            }
-            var a = b
-            'undefined' !== typeof c ? (a = b[c] = []) : (c = 'mixpanel')
-            a.people = a.people || []
-            a.toString = function (a) {
-              var d = 'mixpanel'
-              'mixpanel' !== c && (d += '.' + c)
-              a || (d += ' (stub)')
-              return d
-            }
-            a.people.toString = function () {
-              return a.toString(1) + '.people (stub)'
-            }
-            i =
-              'disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove'.split(
-                ' '
-              )
-            for (h = 0; h < i.length; h++) g(a, i[h])
-            var j = 'set set_once union unset remove delete'.split(' ')
-            a.get_group = function () {
-              function b(c) {
-                d[c] = function () {
-                  call2_args = arguments
-                  call2 = [c].concat(Array.prototype.slice.call(call2_args, 0))
-                  a.push([e, call2])
-                }
-              }
-              for (
-                var d = {}, e = ['get_group'].concat(Array.prototype.slice.call(arguments, 0)), c = 0;
-                c < j.length;
-                c++
-              )
-                b(j[c])
-              return d
-            }
-            b._i.push([e, f, c])
-          }
-          b.__SV = 1.2
-          e = f.createElement('script')
-          e.type = 'text/javascript'
-          e.async = !0
-          e.src =
-            'undefined' !== typeof MIXPANEL_CUSTOM_LIB_URL
-              ? MIXPANEL_CUSTOM_LIB_URL
-              : 'file:' === f.location.protocol && '//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js'.match(/^\/\//)
-              ? 'https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js'
-              : '//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js'
-          g = f.getElementsByTagName('script')[0]
-          g.parentNode.insertBefore(e, g)
-        }
-      })(document, window.mixpanel || [])
-      mixpanel.init('f8eb0f286d38a2dd7312b8cb5abc4d2d', { batch_requests: true })
-    </script>
-    <meta charset="utf-8" />
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
     <title>Mario−César Señoranis</title>
-    <meta name="google-site-verification" content="CPziVTiDUu4mYTO0W7b63PVGE2YKC5lp7Uz-XiIkEWs" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/svg+xml"  href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text y=%22.9em%22 font-size=%2290%22&gt;👋🏼&lt;/text&gt;&lt;/svg&gt;" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="follow, index" />
-    <meta name="description" content="I’m a software developer here is my Personal site and Blog." />
-    <meta name="keywords" content="python, bolivia, mariocesar, mariocesar_bo, zapier, software engineer" />
-    <meta name="author" content="Mario-César Señoranis" />
-    <link rel="canonical" itemprop="url" href="https://mariocesar.xyz" />
-    <link rel="author" href="https://mariocesar.xyz" />
-    <meta property="og:title" content="Mario-César Señoranis Personal Website &amp;amp; Blog" />
-    <meta property="og:locale" content="en" />
-    <meta property="og:url" content="https://mariocesar.xyz" />
-    <meta property="og:site_name" itemprop="name" content="Mario-César Señoranis Personal Website &amp;amp; Blog" />
-    <meta property="og:type" content="blog" />
-    <meta property="og:description" content="I’m a software developer here is my Personal site and Blog." />
-    <meta property="article:publisher" content="https://mariocesar.xyz" />
-    <meta name="twitter:site" content="@mariocesar_bo" />
-    <meta name="twitter:title" content="Mario-César Señoranis Personal Website &amp;amp; Blog" />
-    <meta name="twitter:description" content="I’m a software developer here is my Personal site and Blog." />
     <meta content="#ffffff" name="theme-color" />
     <meta content="#ffffff" name="msapplication-TileColor" />
-    <meta name="next-head-count" content="22" />
-    <link rel="preload" href="/_next/static/css/dfd3593ab2b2b715ea3a.css" as="style" />
-    <link rel="stylesheet" href="/_next/static/css/dfd3593ab2b2b715ea3a.css" data-n-g="" />
-    <noscript data-n-css=""></noscript>
-    <link rel="preload" href="/_next/static/chunks/webpack-b76aa373aed7af3c922c.js" as="script" />
-    <link rel="preload" href="/_next/static/chunks/framework-5e33f488d9410ce9ba9d.js" as="script" />
-    <link rel="preload" href="/_next/static/chunks/597-b29fdf1f0d310d0ba73e.js" as="script" />
-    <link rel="preload" href="/_next/static/chunks/778-b4d22a72475bffce9f59.js" as="script" />
-    <link rel="preload" href="/_next/static/chunks/main-9ca82ec4d4aca520c43d.js" as="script" />
-    <link rel="preload" href="/_next/static/chunks/pages/_app-790151375215e91898ac.js" as="script" />
-    <link rel="preload" href="/_next/static/chunks/pages/index-6db4dbc152fca1f927a1.js" as="script" />
-  </head>
-  <body>
-    <div id="__next">
-      <header></header>
-      <main role="main">
-        <div class="container">
-          <article class="markdown">
-            <h1>
-              👋🏼 Hello,<br />
-              I’m Mario−César Señoranis
-            </h1>
-            <p>
-              I'm a software developer trying to write more, create software, and being a good Dad. Work at ⚡️
-              <a href="https://zapier.com/" title="https://zapier.com/" target="_blank" rel="noopener">zapier.com</a> as
-              an Integration Software Engineer. I also work in
-              <a href="https://humanzilla.com" title="https://humanzilla.com" target="_blank" rel="noopener"
-                >humanzilla.com</a
-              >, a small two-person software agency with my Wife.
-            </p>
-            <p>I grew up, live and work from Santa Cruz de la Sierra, Bolivia.</p>
-            <p>And you've found my slice of the internet.</p>
-            <p>You can also find me:</p>
-            <ul>
-              <li>
-                <p>
-                  🧑🏽‍💻 Talking about work at LinkedIn
-                  <a
-                    href="https://linkedin.com/in/mariocesar/"
-                    title="https://linkedin.com/in/mariocesar/"
-                    target="_blank"
-                    rel="noopener"
-                    >linkedin.com/in/mariocesar</a
-                  >
-                </p>
-              </li>
-              <li>
-                <p>
-                  📸 Sharing pretty photos at Instagram
-                  <a
-                    href="https://instagram.com/mariocesar_bo/"
-                    title="https://instagram.com/mariocesar_bo/"
-                    target="_blank"
-                    rel="noopener"
-                    >instagram.com/mariocesar_bo</a
-                  >
-                </p>
-              </li>
-              <li>
-                <p>
-                  🎙 Speaking in Clubhouse
-                  <a
-                    href="https://joinclubhouse.com/@mariocesar"
-                    title="https://joinclubhouse.com/@mariocesar"
-                    target="_blank"
-                    rel="noopener"
-                    >joinclubhouse.com/@mariocesar</a
-                  >
-                </p>
-                <p>
-                  ☕️ I host a daily room at the club "Club del Desayuno" every day at 9 am about Accountability and
-                  Networking.
-                </p>
-                <p>
-                  🎉 Go to
-                  <a
-                    href="https://joinclubhouse.com/club/club-del-desayuno"
-                    title="https://joinclubhouse.com/club/club-del-desayuno"
-                    target="_blank"
-                    rel="noopener"
-                    >joinclubhouse.com/club/club-del-desayuno</a
-                  >
-                  to participate.
-                </p>
-              </li>
-              <li>
-                <p>
-                  ⌨️ Sharing code and projects in
-                  <a
-                    href="https://github.com/mariocesar"
-                    title="https://github.com/mariocesar"
-                    target="_blank"
-                    rel="noopener"
-                    >github.com/mariocesar</a
-                  >, like this same website
-                  <a
-                    href="https://github.com/mariocesar/mariocesar"
-                    title="https://github.com/mariocesar/mariocesar"
-                    target="_blank"
-                    rel="noopener"
-                    >github.com/mariocesar/mariocesar</a
-                  >
-                </p>
-                <p>
-                  🗒 I post without a particular order helpful bits of code at
-                  <a
-                    href="https://gist.github.com/mariocesar"
-                    title="https://gist.github.com/mariocesar"
-                    target="_blank"
-                    rel="noopener"
-                    >gist.github.com/mariocesar</a
-                  >
-                  that are sometimes worthy of looking at.
-                </p>
-              </li>
-              <li>
-                <p>
-                  🐦 Saying little in Twitter
-                  <a
-                    href="https://twitter.com/mariocesar_bo"
-                    title="https://twitter.com/mariocesar_bo"
-                    target="_blank"
-                    rel="noopener"
-                    >twitter.com/mariocesar_bo</a
-                  >
-                </p>
-              </li>
-            </ul>
-          </article>
-        </div>
-      </main>
-    </div>
-    <script id="__NEXT_DATA__" type="application/json">
-      {
-        "props": {
-          "pageProps": {
-            "title": "Mario−César Señoranis",
-            "content": "\u003ch1\u003e👋🏼 Hello,\u003cbr/\u003e I’m Mario−César Señoranis\u003c/h1\u003e\n\u003cp\u003eI'm a software developer trying to write more, create software, and being a good Dad. Work at ⚡️ \u003ca href=\"https://zapier.com/\" title=\"https://zapier.com/\" target=\"_blank\" rel=\"noopener\"\u003ezapier.com\u003c/a\u003e as an Integration Software Engineer. I also work in \u003ca href=\"https://humanzilla.com\" title=\"https://humanzilla.com\" target=\"_blank\" rel=\"noopener\"\u003ehumanzilla.com\u003c/a\u003e, a small two-person software agency with my Wife.\u003c/p\u003e\n\u003cp\u003eI grew up, live and work from Santa Cruz de la Sierra, Bolivia.\u003c/p\u003e\n\u003cp\u003eAnd you've found my slice of the internet.\u003c/p\u003e\n\u003cp\u003eYou can also find me:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003e🧑🏽‍💻 Talking about work at LinkedIn \u003ca href=\"https://linkedin.com/in/mariocesar/\" title=\"https://linkedin.com/in/mariocesar/\" target=\"_blank\" rel=\"noopener\"\u003elinkedin.com/in/mariocesar\u003c/a\u003e\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e📸 Sharing pretty photos at Instagram \u003ca href=\"https://instagram.com/mariocesar_bo/\" title=\"https://instagram.com/mariocesar_bo/\" target=\"_blank\" rel=\"noopener\"\u003einstagram.com/mariocesar_bo\u003c/a\u003e\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e🎙 Speaking in Clubhouse \u003ca href=\"https://joinclubhouse.com/@mariocesar\" title=\"https://joinclubhouse.com/@mariocesar\" target=\"_blank\" rel=\"noopener\"\u003ejoinclubhouse.com/@mariocesar\u003c/a\u003e\u003c/p\u003e\n\u003cp\u003e☕️ I host a daily room at the club \"Club del Desayuno\" every day at 9 am about Accountability and Networking.\u003c/p\u003e\n\u003cp\u003e🎉 Go to \u003ca href=\"https://joinclubhouse.com/club/club-del-desayuno\" title=\"https://joinclubhouse.com/club/club-del-desayuno\" target=\"_blank\" rel=\"noopener\"\u003ejoinclubhouse.com/club/club-del-desayuno\u003c/a\u003e to participate.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e⌨️ Sharing code and projects in \u003ca href=\"https://github.com/mariocesar\" title=\"https://github.com/mariocesar\" target=\"_blank\" rel=\"noopener\"\u003egithub.com/mariocesar\u003c/a\u003e, like this same website \u003ca href=\"https://github.com/mariocesar/mariocesar\" title=\"https://github.com/mariocesar/mariocesar\" target=\"_blank\" rel=\"noopener\"\u003egithub.com/mariocesar/mariocesar\u003c/a\u003e\u003c/p\u003e\n\u003cp\u003e🗒 I post without a particular order helpful bits of code at \u003ca href=\"https://gist.github.com/mariocesar\" title=\"https://gist.github.com/mariocesar\" target=\"_blank\" rel=\"noopener\"\u003egist.github.com/mariocesar\u003c/a\u003e that are sometimes worthy of looking at.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e🐦 Saying little in Twitter \u003ca href=\"https://twitter.com/mariocesar_bo\" title=\"https://twitter.com/mariocesar_bo\" target=\"_blank\" rel=\"noopener\"\u003etwitter.com/mariocesar_bo\u003c/a\u003e\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n"
-          },
-          "__N_SSG": true
-        },
-        "page": "/",
-        "query": {},
-        "buildId": "2qMQkp7zSuxi5Oe0zZ_qS",
-        "isFallback": false,
-        "gsp": true
-      }
-    </script>
-    <script nomodule="" src="/_next/static/chunks/polyfills-8683bd742a84c1edd48c.js"></script>
-    <script src="/_next/static/chunks/webpack-b76aa373aed7af3c922c.js" async=""></script>
-    <script src="/_next/static/chunks/framework-5e33f488d9410ce9ba9d.js" async=""></script>
-    <script src="/_next/static/chunks/597-b29fdf1f0d310d0ba73e.js" async=""></script>
-    <script src="/_next/static/chunks/778-b4d22a72475bffce9f59.js" async=""></script>
-    <script src="/_next/static/chunks/main-9ca82ec4d4aca520c43d.js" async=""></script>
-    <script src="/_next/static/chunks/pages/_app-790151375215e91898ac.js" async=""></script>
-    <script src="/_next/static/chunks/pages/index-6db4dbc152fca1f927a1.js" async=""></script>
-    <script src="/_next/static/2qMQkp7zSuxi5Oe0zZ_qS/_buildManifest.js" async=""></script>
-    <script src="/_next/static/2qMQkp7zSuxi5Oe0zZ_qS/_ssgManifest.js" async=""></script>
+    <link rel="stylesheet" href="css/main.css" />
     <script>
-      mixpanel.track_links('a[href^=http][target=_blank]', 'External Link clicked')
-      mixpanel.track('Page viewed')
+        <!-- Quickly update the support of JS from the browser -->
+        (function (el) {
+            el.className = el.className.replace('no-js', ' ')
+        })(document.getElementsByTagName("html")[0])
     </script>
-  </body>
+    <meta name="google-site-verification" content="CPziVTiDUu4mYTO0W7b63PVGE2YKC5lp7Uz-XiIkEWs" />
+    <meta name="description" content="I’m a software developer here is my Personal site and Blog" />
+    <meta
+      name="keywords"
+      content="python, bolivia, mariocesar, mariocesar_bo, zapier, software engineer"
+    />
+    <meta name="author" content="Mario-César Señoranis" />
+    <link rel="canonical" itemProp="url" href="https://mariocesar.xyz" />
+    <link rel="author" href="https://mariocesar.xyz" />
+
+    <meta property="og:title" content="Mario−César Señoranis" />
+    <meta property="og:locale" content="en" />
+    <meta property="og:url" content="https://mariocesar.xyz" />
+    <meta property="og:site_name" itemProp="name" content="Mario−César Señoranis" />
+    <meta property="og:type" content="blog" />
+    <meta property="og:description" content="I’m a software developer here is my Personal site and Blog" />
+    <meta property="article:publisher" content="https://mariocesar.xyz" />
+
+    <meta name="twitter:site" content="@mariocesar_bo" />
+    <meta name="twitter:title" content="Mario−César Señoranis" />
+    <meta name="twitter:description" content="I’m a software developer here is my Personal site and Blog" />
+</head>
+<body>
+<div class="root">
+    <header></header>
+    <main role="main">
+        <div class="container">
+            <article>
+                <h1>
+                    👋🏼 Hello,<br/> I’m Mario−César Señoranis 
+                </h1>
+                <p>
+                    I&#x27;m a software developer trying to write more, create software, and being a good Dad. Work at ⚡️ <a href="https://zapier.com/" rel="noopener" target="_blank" title="https://zapier.com/">zapier.com</a> as an Integration Software Engineer. I also work in <a href="https://humanzilla.com" rel="noopener" target="_blank" title="https://humanzilla.com">humanzilla.com</a>, a small two-person software agency with my Wife. 
+                </p>
+                <p>
+                    I grew up, live and work from Santa Cruz de la Sierra, Bolivia. 
+                </p>
+                <p>
+                    And you&#x27;ve found my slice of the internet. 
+                </p>
+                <p>
+                    You can also find me: 
+                </p>
+                <ul>
+                    <li>
+                        🧑🏽‍💻 Talking about work at LinkedIn <a href="https://linkedin.com/in/mariocesar/" rel="noopener" target="_blank" title="https://linkedin.com/in/mariocesar/">linkedin.com/in/mariocesar</a> 
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        📸 Sharing pretty photos at Instagram <a href="https://instagram.com/mariocesar_bo/" rel="noopener" target="_blank" title="https://instagram.com/mariocesar_bo/">instagram.com/mariocesar_bo</a> 
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p>
+                            🎙 Speaking in Clubhouse <a href="https://joinclubhouse.com/@mariocesar" rel="noopener" target="_blank" title="https://joinclubhouse.com/@mariocesar">joinclubhouse.com/@mariocesar</a> 
+                        </p>
+                        <p>
+                            ☕️ I host a daily room at the club &quot;Club del Desayuno&quot; every day at 9 am about Accountability and Networking. 
+                        </p>
+                        <p>
+                            🎉 Go to <a href="https://joinclubhouse.com/club/club-del-desayuno" rel="noopener" target="_blank" title="https://joinclubhouse.com/club/club-del-desayuno">joinclubhouse.com/club/club-del-desayuno</a> to participate. 
+                        </p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p>
+                            ⌨️ Sharing code and projects in <a href="https://github.com/mariocesar" rel="noopener" target="_blank" title="https://github.com/mariocesar">github.com/mariocesar</a>, like this same website <a href="https://github.com/mariocesar/mariocesar" rel="noopener" target="_blank" title="https://github.com/mariocesar/mariocesar">github.com/mariocesar/mariocesar</a> 
+                        </p>
+                        <p>
+                            🗒 I post without a particular order helpful bits of code at <a href="https://gist.github.com/mariocesar" rel="noopener" target="_blank" title="https://gist.github.com/mariocesar">gist.github.com/mariocesar</a> that are sometimes worthy of looking at. 
+                        </p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        🐦 Saying little in Twitter <a href="https://twitter.com/mariocesar_bo" rel="noopener" target="_blank" title="https://twitter.com/mariocesar_bo">twitter.com/mariocesar_bo</a> 
+                    </li>
+                </ul>
+            </article>
+        </div>
+    </main>
+</div>
+</body>
 </html>
