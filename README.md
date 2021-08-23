@@ -33,3 +33,4 @@ You can also find me:
   📼 When I stream, I do it simultaneously on [my YouTube Channel](https://www.youtube.com/channel/UCW7WUg3fWY4QHQTNsSEdNFQ), I host some recordings there that someday I will remove 😅
 
 - 🐦 Saying little in Twitter [twitter.com/mariocesar_bo](https://twitter.com/mariocesar_bo)
+
