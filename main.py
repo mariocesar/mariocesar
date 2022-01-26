@@ -402,6 +402,7 @@ def main_build():
     Path("out/robots.txt").write_text(build_robots_txt(pages))
 
     # Assets
+    Path("out/mariocesar.jpg").write_bytes(Path("public/mariocesar.jpg").read_bytes())
     Path("out/css/main.css").write_text(Path("public/css/main.css").read_text())
 
 
