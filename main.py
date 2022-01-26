@@ -8,7 +8,8 @@ from dataclasses import dataclass
 from functools import wraps, partial
 from pathlib import Path
 from typing import Any, Callable, Dict, Generator, Iterator, List, Optional, Union
-
+from yattag import Doc, indent
+from datetime import datetime
 import jinja2
 import markdown
 import yaml
@@ -179,6 +180,7 @@ class Page:
     path: Path
     title: str
     content: str
+    url: str
     description: Optional[str] = None
 
     @classmethod
@@ -289,7 +291,7 @@ def make_ld_json_script_tag(page: Page, data: Dict[str, Any]) -> str:
     out = io.StringIO()
     out.write('<script type="application/ld+json">\n')
     out.write(indent(json.dumps(data, indent="    "), "    "))
-    out.write("\n</script>")
+    out.write("\n    </script>")
 
     return out.getvalue()
 
@@ -343,8 +345,44 @@ get_schema_website = partial(
     },
 )
 
+def build_sitemaps_xml(pages: List[Page]) -> str:
+    doc, tag, text = Doc().tagtext()
+    doc.asis('<?xml version="1.0" encoding="UTF-8"?>\n')
+
+    with tag("urlset", xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"):
+        for page in pages:
+            with tag("url"):
+                with tag("loc"):
+                    text(f"https://mariocesar.xyz{page.url}")
+                with tag("lastmod"):
+                    text(datetime.now().strftime('%Y-%m-%d'))
+                with tag("changefreq"):
+                    text("daily")
+                with tag("priority"):
+                    text(1)
+
+    return indent(
+        doc.getvalue(),
+        indentation = '    ',
+        newline = '\n',
+        indent_text = True
+    )
+
+def build_robots_txt(pages: List[Page]) -> str:
+    return """
+User-agent: *
+Allow:
+
+Sitemap: https://mariocesar.xyz/sitemap.xml
+"""
+
 
 def main_build():
+    # Create directories
+    Path("out/css").mkdir(parents=True, exist_ok=True)
+
+    # Build Pages
+    pages: List[Page] = []
     page = Page.from_markdown(Path("README.md"))
     page.path = Path("pages/index.jinja2")
     page.content = env.get_template("index.jinja2").render(
@@ -354,11 +392,18 @@ def main_build():
             "get_schema_website": get_schema_website,
         }
     )
-    Path("out/css").mkdir(parents=True, exist_ok=True)
-    Path("out/css").mkdir(parents=True, exist_ok=True)
-    Path("out/css/main.css").write_text(Path("public/css/main.css").read_text())
+    page.url = "/"
 
     out(page, Path("out/index.html"))
+    pages.append(page)
+
+    # Post build pages
+    Path("out/sitemap.xml").write_text(build_sitemaps_xml(pages))
+    Path("out/robots.txt").write_text(build_robots_txt(pages))
+
+    # Assets
+    Path("out/css/main.css").write_text(Path("public/css/main.css").read_text())
+
 
 
 if __name__ == "__main__":

@@ -16,3 +16,5 @@ mdx-truly-sane-lists==1.2
     # via -r requirements.in
 pyyaml==5.4.1
     # via -r requirements.in
+yattag==1.14.0
+    # via -r requirements.in
