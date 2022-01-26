@@ -23,6 +23,7 @@
     <meta name="twitter:site" content="@mariocesar_bo" />
     <meta name="twitter:title" content="{{ page.title }}" />
     <meta name="twitter:description" content="{{ page.description }}" />
+    {{ get_schema_website(page=page) }}
 {%- endblock %}
 
 {% block body -%}

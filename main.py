@@ -1,9 +1,11 @@
 import html
 import io
 import re
+import json
 import xml.etree.ElementTree as etree
+from textwrap import indent
 from dataclasses import dataclass
-from functools import wraps
+from functools import wraps, partial
 from pathlib import Path
 from typing import Any, Callable, Dict, Generator, Iterator, List, Optional, Union
 
@@ -283,6 +285,65 @@ def main_pipeline():
     )
 
 
+def make_ld_json_script_tag(page: Page, data: Dict[str, Any]) -> str:
+    out = io.StringIO()
+    out.write('<script type="application/ld+json">\n')
+    out.write(indent(json.dumps(data, indent="    "), "    "))
+    out.write("\n</script>")
+
+    return out.getvalue()
+
+
+get_schema_website = partial(
+    make_ld_json_script_tag,
+    data={
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "url": "https://mariocesar.xyz/",
+        "abstract": "I’m a software developer here is my Personal site and Blog",
+        "keywords": [
+            "python",
+            "bolivia",
+            "santa cruz de la sierra",
+            "mariocesar",
+            "mariocesar_bo",
+            "zapier",
+            "software engineer",
+        ],
+        "mainEntity": {
+            "@type": "Person",
+            "@context": "http://schema.org",
+            "familyName": "Señoranis Ayala",
+            "givenName": "Mario César",
+            "worksFor": "https://zapier.com",
+            "jobTitle": "Senior Software Engineer",
+            "worksFor": {"@type": "Organization", "name": "Zapier"},
+            "image": "https://mariocesar.xyz/mariocesar.jpg",
+            "gender": "http://schema.org/Male",
+            "sameAs": [
+                "https://mariocesar.xyz/",
+                "https://twitter.com/mariocesar_bo",
+                "https://www.linkedin.com/in/mariocesar/",
+                "https://facebook.com/mariocesar",
+                "https://instagram.com/mariocesar_bo",
+                "https://github.com/mariocesar",
+                "https://joinclubhouse.com/@mariocesar",
+            ],
+        },
+        "author": {
+            "@type": "Person",
+            "name": "Mario César Señoranis",
+            "url": "https://mariocesar.xyz",
+        },
+        "publisher": {
+            "@type": "Person",
+            "name": "Mario César Señoranis",
+            "url": "https://mariocesar.xyz",
+        },
+    },
+)
+
+
 def main_build():
     page = Page.from_markdown(Path("README.md"))
     page.path = Path("pages/index.jinja2")
@@ -290,6 +351,7 @@ def main_build():
         {
             "page": page,
             "site": {"url": "https://mariocesar.xyz"},
+            "get_schema_website": get_schema_website,
         }
     )
     Path("out/css").mkdir(parents=True, exist_ok=True)

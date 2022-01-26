@@ -1,4 +1,4 @@
-title: Mario−César Señoranis
+title: Mario−César Señoranis | Software Developer
 
 description: I’m a software developer here is my Personal site and Blog
 
