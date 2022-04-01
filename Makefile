@@ -14,4 +14,4 @@ check:
 
 build:
 	rm -rf out
-	poetry run python -m builder
+	poetry run python -m builder build
