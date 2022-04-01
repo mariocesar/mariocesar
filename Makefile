@@ -1,10 +1,17 @@
 
-defualt:  requirements.txt
-	pip install -r requirements.txt
+defualt:
+	poetry install
 
-requirements.txt:
-	pip-compile -v  requirements.in
+fix:
+	poetry run isort src/
+	poetry run black src/
+	poetry run flake8 src/
+
+check:
+	poetry run isort --diff --check src/
+	poetry run black --diff --check src/
+	poetry run flake8 src/
 
 build:
 	rm -rf out
-	python main.py
+	poetry run python -m builder

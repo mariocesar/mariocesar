@@ -1,20 +1,21 @@
 import html
 import io
-import re
 import json
+import re
 import xml.etree.ElementTree as etree
-from textwrap import indent
 from dataclasses import dataclass
-from functools import wraps, partial
-from pathlib import Path
-from typing import Any, Callable, Dict, Generator, Iterator, List, Optional, Union
-from yattag import Doc, indent
 from datetime import datetime
+from functools import partial, wraps
+from pathlib import Path
+from textwrap import indent
+from typing import Any, Callable, Dict, Generator, Iterator, List, Optional, Union
+
 import jinja2
 import markdown
 import yaml
 from markdown.inlinepatterns import LINK_RE, LinkInlineProcessor
 from markdown.serializers import _escape_attrib_html
+from yattag import Doc
 
 RootDir = Path(__file__).parent
 
@@ -254,7 +255,7 @@ def grep(match_pattern: str):
 
 
 def exhausts(generator: Iterator) -> None:
-    for item in generator:
+    for _ in generator:
         pass
 
 
@@ -317,7 +318,6 @@ get_schema_website = partial(
             "@context": "http://schema.org",
             "familyName": "Señoranis Ayala",
             "givenName": "Mario César",
-            "worksFor": "https://zapier.com",
             "jobTitle": "Senior Software Engineer",
             "worksFor": {"@type": "Organization", "name": "Zapier"},
             "image": "https://mariocesar.xyz/mariocesar.jpg",
@@ -345,6 +345,7 @@ get_schema_website = partial(
     },
 )
 
+
 def build_sitemaps_xml(pages: List[Page]) -> str:
     doc, tag, text = Doc().tagtext()
     doc.asis('<?xml version="1.0" encoding="UTF-8"?>\n')
@@ -355,18 +356,14 @@ def build_sitemaps_xml(pages: List[Page]) -> str:
                 with tag("loc"):
                     text(f"https://mariocesar.xyz{page.url}")
                 with tag("lastmod"):
-                    text(datetime.now().strftime('%Y-%m-%d'))
+                    text(datetime.now().strftime("%Y-%m-%d"))
                 with tag("changefreq"):
                     text("daily")
                 with tag("priority"):
                     text(1)
 
-    return indent(
-        doc.getvalue(),
-        indentation = '    ',
-        newline = '\n',
-        indent_text = True
-    )
+    return indent(doc.getvalue(), indentation="    ", newline="\n", indent_text=True)
+
 
 def build_robots_txt(pages: List[Page]) -> str:
     return """
@@ -404,7 +401,6 @@ def main_build():
     # Assets
     Path("out/mariocesar.jpg").write_bytes(Path("public/mariocesar.jpg").read_bytes())
     Path("out/css/main.css").write_text(Path("public/css/main.css").read_text())
-
 
 
 if __name__ == "__main__":

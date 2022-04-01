@@ -1,0 +1,25 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: ./.github/workflows/python
+        with:
+          prefix: "main"
+
+      - name: isort
+        run: poetry run isort --diff --check src/
+
+      - name: black
+        run: poetry run black --diff --check src/
+
+      - name: flake8
+        run: poetry run flake8 src/
