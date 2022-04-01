@@ -2,10 +2,10 @@ import io
 import json
 from datetime import datetime
 from functools import partial
-from yattag.indentation import indent
 from typing import Any, Dict, List
 
 from yattag import Doc
+from yattag.indentation import indent
 
 from .pages import Page
 

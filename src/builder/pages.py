@@ -1,13 +1,10 @@
 import html
 import os
-
 import re
 from dataclasses import dataclass
-
 from functools import wraps
 from pathlib import Path
-
-from typing import Dict, Generator, Iterator, List, Optional, Union, Any
+from typing import Any, Dict, Generator, Iterator, List, Optional, Union
 
 import yaml
 

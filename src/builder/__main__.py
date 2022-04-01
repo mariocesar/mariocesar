@@ -1,8 +1,10 @@
-from typing import List
-import click
 from pathlib import Path
+from typing import List
+
+import click
+
 from builder.pages import Page, out, render
-from builder.tasks import get_schema_website, build_robots_txt, build_sitemaps_xml
+from builder.tasks import build_robots_txt, build_sitemaps_xml, get_schema_website
 
 
 @click.group()

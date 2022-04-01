@@ -1,18 +1,14 @@
 import html
 import io
 import os
-
 import xml.etree.ElementTree as etree
-
 from pathlib import Path
-
 from typing import Any, Callable, Dict, Generator, Optional
 
 import jinja2
 import markdown
 from markdown.inlinepatterns import LINK_RE, LinkInlineProcessor
 from markdown.serializers import _escape_attrib_html
-
 
 ROOT_DIR = Path(os.getcwd())
 
