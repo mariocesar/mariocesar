@@ -29,7 +29,7 @@ class Page:
         title = meta.get("title", None)
         description = meta.get("description", None)
 
-        return cls(path, title, content, description)
+        return cls(path, title, content, url=path, description=description)
 
 
 def consumer(func):
