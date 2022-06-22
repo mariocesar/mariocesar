@@ -28,6 +28,8 @@ build:
 		--convert-links \
 		--page-requisites \
 		--no-host-directories \
+		--retry-on-host-error \
+		--tries 10 \
 		--timeout 10 \
 		-P out \
 		http://localhost:8000
