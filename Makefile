@@ -12,6 +12,9 @@ check:
 	poetry run black --diff --check src/
 	poetry run flake8 src/
 
+serve:
+	poetry run uvicorn --reload --port=8000 builder.app:app
+
 build:
 	rm -rf out
 	rm -f pidfile
@@ -38,7 +41,7 @@ build:
 		--tries 10 \
 		--timeout 10 \
 		-P out \
-		http://127.0.0.1:8000
+		--input-file mirror.list
 
 	kill $$(cat pidfile)
 

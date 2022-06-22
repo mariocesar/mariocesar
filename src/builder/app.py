@@ -1,12 +1,20 @@
+from datetime import datetime
 from pathlib import Path
 
 from fastapi import FastAPI, Request
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, PlainTextResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
+from yattag import Doc
+from yattag.indentation import indent
 
-from builder.pages import Page
-from builder.tasks import build_robots_txt, build_sitemaps_xml, yaml2json
+from builder.pages import Page, load_yaml
+from builder.tasks import yaml2json
+
+
+class XMLTextResponse(PlainTextResponse):
+    media_type = "text/xml"
+
 
 BASE_DIR = Path(__file__).parent.resolve()
 
@@ -34,3 +42,35 @@ async def landing(request: Request):
             "request": request,
         },
     )
+
+
+@app.get("/sitemap.xml", response_class=XMLTextResponse)
+async def sitemap():
+    doc, tag, text = Doc().tagtext()
+    doc.asis('<?xml version="1.0" encoding="UTF-8"?>\n')
+    sitemap = load_yaml(BASE_DIR / "data/sitemap.yml")
+
+    with tag(
+        "urlset",
+        **{
+            "xmlns": "http://www.sitemaps.org/schemas/sitemap/0.9",
+            "xmlns:xhtml": "http://www.w3.org/1999/xhtml",
+        },
+    ):
+        for url in sitemap["urlset"]:
+            with tag("url"):
+                with tag("loc"):
+                    text(url["loc"])
+                with tag("lastmod"):
+                    text(datetime.now().strftime("%Y-%m-%d"))
+
+    return indent(doc.getvalue(), newline="\n")
+
+
+@app.get("/robots.txt", response_class=PlainTextResponse)
+async def robots():
+    return """User-agent: *
+Allow:
+
+Sitemap: https://mariocesar.xyz/sitemap.xml
+    """
