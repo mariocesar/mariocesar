@@ -1,11 +1,8 @@
 name: Build and Deploy
 
 on:
-  workflow_dispatch:
-    inputs:
-      message:
-        description: "Any message. This will be added as a comment in the index.html"
-        required: false
+  push:
+    branches: [main]
 
 jobs:
   build:
