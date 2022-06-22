@@ -16,7 +16,11 @@ build:
 	rm -rf out
 	rm -f pidfile
 
-	nohup poetry run uvicorn --port 8000 --workers 2 builder.app:app > uvicorn.log 2>&1 & echo "$$!" > pidfile
+	nohup poetry run uvicorn \
+		--host=0.0.0.0 \
+		--port=8000 \
+		builder.app:app \
+		> uvicorn.log 2>&1 & echo "$$!" > pidfile
 
 	wget \
 		--mirror \
