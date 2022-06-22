@@ -17,7 +17,7 @@ build:
 	rm -f pidfile
 
 	nohup poetry run uvicorn \
-		--host=0.0.0.0 \
+		--host=127.0.0.1 \
 		--port=8000 \
 		builder.app:app \
 		> uvicorn.log 2>&1 & echo "$$!" > pidfile
@@ -32,7 +32,7 @@ build:
 		--tries 10 \
 		--timeout 10 \
 		-P out \
-		http://localhost:8000
+		http://127.0.0.1:8000
 
 	kill $$(cat pidfile)
 

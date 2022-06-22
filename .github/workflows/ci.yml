@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,3 +23,25 @@ jobs:
 
       - name: flake8
         run: "poetry run flake8 src/ ||:"
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: ./.github/workflows/python
+        with:
+          prefix: "main"
+
+      - name: build
+        run: |
+          set -eux
+          make build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
+          cname: mariocesar.xyz
