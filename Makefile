@@ -22,6 +22,9 @@ build:
 		builder.app:app \
 		> uvicorn.log 2>&1 & echo "$$!" > pidfile
 
+	cat pidfile
+	cat uvicorn.log
+
 	wget \
 		--mirror \
 		--adjust-extension \
