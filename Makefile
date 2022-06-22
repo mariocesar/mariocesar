@@ -22,8 +22,11 @@ build:
 		builder.app:app \
 		> uvicorn.log 2>&1 & echo "$$!" > pidfile
 
-	cat pidfile
-	cat uvicorn.log
+	@echo "Waiting for launch 8000..."
+
+	while ! nc -z localhost 8000; do sleep 0.1; done
+
+	@echo "Webapp launched launched"
 
 	wget \
 		--mirror \
