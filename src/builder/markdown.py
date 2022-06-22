@@ -5,7 +5,6 @@ import xml.etree.ElementTree as etree
 from pathlib import Path
 from typing import Any, Callable, Dict, Generator, Optional
 
-import jinja2
 import markdown
 from markdown.inlinepatterns import LINK_RE, LinkInlineProcessor
 from markdown.serializers import _escape_attrib_html
@@ -29,7 +28,7 @@ HTML_EMPTY = {
 }
 
 INLINE_ELEMENTS = {"span", "a", "em", "strong", "code"}
-INDENT = "    "
+INDENT = "  "
 
 
 def render_attrs(obj: Dict[str, str]) -> str:
@@ -167,8 +166,3 @@ md = Markdown(
     extensions=[MarkdownExtension(), "mdx_truly_sane_lists"],
 )
 md.stripTopLevelTags = False
-
-loader = jinja2.FileSystemLoader(ROOT_DIR / "pages")
-
-env = jinja2.Environment(loader=loader, auto_reload=False)
-env.globals["markdown"] = md.convert

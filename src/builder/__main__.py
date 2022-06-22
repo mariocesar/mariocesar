@@ -13,6 +13,11 @@ def cli():
 
 
 @cli.command()
+def serve():
+    ...
+
+
+@cli.command()
 def build():
     """Build website"""
     # Create directories

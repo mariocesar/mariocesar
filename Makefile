@@ -14,4 +14,20 @@ check:
 
 build:
 	rm -rf out
-	poetry run python -m builder build
+	rm -f pidfile
+
+	poetry run uvicorn --port 8000 --workers 2 builder.app:app & echo "$$!" > pidfile
+
+	wget \
+		--mirror \
+		--adjust-extension \
+		--convert-links \
+		--page-requisites \
+		--no-host-directories \
+		--timeout 10 \
+		-P out \
+		http://localhost:8000
+
+	kill $$(cat pidfile)
+
+	rm -f pidfile

@@ -1,71 +1,17 @@
-import io
 import json
 from datetime import datetime
 from functools import partial
+from pathlib import Path
 from typing import Any, Dict, List
 
 from yattag import Doc
 from yattag.indentation import indent
 
-from .pages import Page
+from .pages import Page, load_yaml
 
 
-def make_ld_json_script_tag(page: Page, data: Dict[str, Any]) -> str:
-    out = io.StringIO()
-    out.write('<script type="application/ld+json">\n')
-    out.write(indent(json.dumps(data, indent="    "), "    "))
-    out.write("\n    </script>")
-
-    return out.getvalue()
-
-
-get_schema_website = partial(
-    make_ld_json_script_tag,
-    data={
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "url": "https://mariocesar.xyz/",
-        "abstract": "I’m a software developer here is my Personal site and Blog",
-        "keywords": [
-            "python",
-            "bolivia",
-            "santa cruz de la sierra",
-            "mariocesar",
-            "mariocesar_bo",
-            "zapier",
-            "software engineer",
-        ],
-        "mainEntity": {
-            "@type": "Person",
-            "@context": "http://schema.org",
-            "familyName": "Señoranis Ayala",
-            "givenName": "Mario César",
-            "jobTitle": "Senior Software Engineer",
-            "worksFor": {"@type": "Organization", "name": "Zapier"},
-            "image": "https://mariocesar.xyz/mariocesar.jpg",
-            "gender": "http://schema.org/Male",
-            "sameAs": [
-                "https://mariocesar.xyz/",
-                "https://twitter.com/mariocesar_bo",
-                "https://www.linkedin.com/in/mariocesar/",
-                "https://facebook.com/mariocesar",
-                "https://instagram.com/mariocesar_bo",
-                "https://github.com/mariocesar",
-                "https://joinclubhouse.com/@mariocesar",
-            ],
-        },
-        "author": {
-            "@type": "Person",
-            "name": "Mario César Señoranis",
-            "url": "https://mariocesar.xyz",
-        },
-        "publisher": {
-            "@type": "Person",
-            "name": "Mario César Señoranis",
-            "url": "https://mariocesar.xyz",
-        },
-    },
-)
+def yaml2json(path: str) -> str:
+    return json.dumps(load_yaml((Path(__file__).parent / path).resolve()), indent=2)
 
 
 def build_sitemaps_xml(pages: List[Page]) -> str:

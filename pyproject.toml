@@ -13,6 +13,9 @@ yattag = "^1.14.0"
 Markdown = "^3.3.6"
 mdx-truly-sane-lists = "^1.2"
 click = "^8.1.2"
+watchdog = "^2.1.7"
+fastapi = "^0.78.0"
+uvicorn = {extras = ["uvloop"], version = "^0.17.6"}
 
 [tool.poetry.dev-dependencies]
 isort = "^5.10.1"

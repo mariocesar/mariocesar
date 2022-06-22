@@ -20,7 +20,7 @@ jobs:
       - name: build
         run: |
           set -eux
-          poetry run python -m builder build
+          make build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
