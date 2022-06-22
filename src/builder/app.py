@@ -7,6 +7,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from yattag import Doc
 from yattag.indentation import indent
+<<<<<<< HEAD
 
 from builder.pages import Page, load_yaml
 from builder.tasks import yaml2json
@@ -15,6 +16,16 @@ from builder.tasks import yaml2json
 class XMLTextResponse(PlainTextResponse):
     media_type = "text/xml"
 
+=======
+
+from builder.pages import Page
+from builder.utils import yaml2json, load_yaml
+
+
+class XMLTextResponse(PlainTextResponse):
+    media_type = "text/xml"
+
+>>>>>>> 6b200ae (Add robots and sitemap)
 
 BASE_DIR = Path(__file__).parent.resolve()
 

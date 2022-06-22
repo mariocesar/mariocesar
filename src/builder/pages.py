@@ -1,5 +1,4 @@
 import html
-import os
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Optional
@@ -20,7 +19,7 @@ class Page:
     @classmethod
     def from_markdown(cls, path: Path):
         head, body = path.read_text().split("\n---\n", 1)
-        meta = yaml.load(head, Loader=Loader)
+        meta = yaml.load(head, Loader=YamlLoader)
         content = md.convert(body)
         title = meta.get("title", None)
         description = meta.get("description", None)
@@ -28,7 +27,7 @@ class Page:
         return cls(path, title, content, url=path, description=description)
 
 
-class Loader(yaml.SafeLoader):
+class YamlLoader(yaml.SafeLoader):
     ...
 
     def construct_html_escape(self, node):
@@ -40,10 +39,6 @@ class Loader(yaml.SafeLoader):
         return self.construct_yaml_str(node)
 
 
-Loader.add_constructor("!include", Loader.construct_html_escape)
-Loader.add_constructor("!escape", Loader.construct_html_escape)
-Loader.add_path_resolver("!str", ["meta"])
-
-
-def load_yaml(path: Path):
-    return yaml.load(path.open("rt"), Loader=Loader)
+YamlLoader.add_constructor("!include", YamlLoader.construct_html_escape)
+YamlLoader.add_constructor("!escape", YamlLoader.construct_html_escape)
+YamlLoader.add_path_resolver("!str", ["meta"])
