@@ -16,7 +16,7 @@ build:
 	rm -rf out
 	rm -f pidfile
 
-	poetry run uvicorn --port 8000 --workers 2 builder.app:app & echo "$$!" > pidfile
+	nohup poetry run uvicorn --port 8000 --workers 2 builder.app:app > uvicorn.log 2>&1 & echo "$$!" > pidfile
 
 	wget \
 		--mirror \
@@ -30,4 +30,8 @@ build:
 
 	kill $$(cat pidfile)
 
+	cat uvicorn.log
+	find out/ -type f
+
 	rm -f pidfile
+	rm -f uvicorn.log
