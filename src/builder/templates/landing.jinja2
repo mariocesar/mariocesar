@@ -26,5 +26,9 @@
 {%- endblock %}
 
 {% block body -%}
+
+<article class="prose prose-stone mx-auto prose-h1:tracking-tight text-gray-700 lg:prose-h1:leading-snug">
 {{ page.content|safe|indent(6) }}
+</article>
+
 {%- endblock %}

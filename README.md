@@ -3,7 +3,7 @@ title: Mario−César Señoranis | Software Developer
 description: I’m a software developer here is my site and Blog
 ---
 
-# 👋🏼 Hello, <br> I’m Mario−César Señoranis
+# 👋🏼 Hello,<br>I’m Mario−César Señoranis
 
 I'm a software developer trying to write more, create exciting software, share what I know, and for the most, just be the best Dad I can be. I Work at ⚡️ [zapier.com](https://zapier.com/) as an Integration Software Engineer. I also work at [humanzilla.com](https://humanzilla.com), a small two-person software agency with my Wife.
 
@@ -14,21 +14,12 @@ And you've found my tiny slice of the internet.
 You can also find me:
 
 - 🧑🏽‍💻 Talking about work at LinkedIn [linkedin.com/in/mariocesar](https://linkedin.com/in/mariocesar/)
-
 - 📸 Sharing pretty photos on Instagram [instagram.com/mariocesar_bo](https://instagram.com/mariocesar_bo/)
-
 - 🎙 Speaking in Clubhouse [joinclubhouse.com/@mariocesar](https://joinclubhouse.com/@mariocesar)
-
-  ☕️ I host a daily room at the club "Club del Desayuno" every day at 9 am about Accountability and Networking.
-
-  🎉 Go to [joinclubhouse.com/club/club-del-desayuno](https://joinclubhouse.com/club/club-del-desayuno) to participate.
-
+  - ☕️ I host a daily room at the club "Club del Desayuno" every day at 9 am about Accountability and Networking.
+  - 🎉 Go to [joinclubhouse.com/club/club-del-desayuno](https://joinclubhouse.com/club/club-del-desayuno) to participate.
 - ⌨️ Sharing code and projects in [github.com/mariocesar](https://github.com/mariocesar), like this same website [github.com/mariocesar/mariocesar](https://github.com/mariocesar/mariocesar)
-
-  🗒 I post without a particular order helpful bits of code at [gist.github.com/mariocesar](https://gist.github.com/mariocesar) that are sometimes worthy of looking at.
-
+  - 🗒 I post without a particular order helpful bits of code at [gist.github.com/mariocesar](https://gist.github.com/mariocesar) that are sometimes worthy of looking at.
 - 📺 You can watch me code live and chat with me on [twitch.tv/mariocesar_xyz](https://www.twitch.tv/mariocesar_xyz) at weekends and sometimes randomly on any given day
-
-  📼 When I stream, I do it simultaneously on [my YouTube Channel](https://www.youtube.com/channel/UCW7WUg3fWY4QHQTNsSEdNFQ), I host some recordings there that someday I will remove 😅
-
+  - 📼 When I stream, I do it simultaneously on [my YouTube Channel](https://www.youtube.com/channel/UCW7WUg3fWY4QHQTNsSEdNFQ), I host some recordings there that someday I will remove 😅
 - 🐦 Saying little on Twitter [twitter.com/mariocesar_bo](https://twitter.com/mariocesar_bo)
