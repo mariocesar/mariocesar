@@ -14,25 +14,18 @@ runs:
         python-version: "3.10"
 
     - uses: snok/install-poetry@master
-
-    - name: Get Date
-      id: get-date
-      run: |
-        echo "::set-output name=date::$(/bin/date -u "+%Y%m%d")"
-      shell: bash
-
-    - uses: actions/cache@v1
       with:
-        path: |
-          ~/.cache
-          ~/.local/cache
-        key: ${{ inputs.prefix }}-cache-${{ runner.os }}-${{ hashFiles('.github/workflows/python/*') }}-${{ steps.get-date.outputs.date }}
+        virtualenvs-create: true
+        virtualenvs-in-project: true
 
     - uses: actions/cache@v1
       id: poetry-lock
       with:
-        path: .venv
-        key: ${{ inputs.prefix }}-venv-${{ runner.os }}-${{ hashFiles('.github/workflows/python/*') }}-${{ hashFiles('**/poetry.lock') }}
+        path: |
+          ~/.cache
+          ~/.local/cache
+          .venv
+        key: ${{ inputs.prefix }}-venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
 
     - name: Install dependencies
       if: steps.poetry-lock.outputs.cache-hit != 'true'
