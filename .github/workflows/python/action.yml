@@ -21,10 +21,7 @@ runs:
     - uses: actions/cache@v1
       id: poetry-lock
       with:
-        path: |
-          ~/.cache
-          ~/.local/cache
-          .venv
+        path: .venv
         key: ${{ inputs.prefix }}-venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
 
     - name: Install dependencies
