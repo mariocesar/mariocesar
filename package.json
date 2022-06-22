@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "build": "postcss ./src/builder/styles/main.css -o ./public/static/css/main.css --env production",
-        "dev": "postcss ./src/builder/styles/main.css -o ./public/static/css/main.css--env develop --map --watch"
+        "dev": "postcss ./src/builder/styles/main.css -o ./public/static/css/main.css --env develop --map --watch"
     },
     "repository": {
         "type": "git",

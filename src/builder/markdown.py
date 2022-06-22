@@ -157,7 +157,7 @@ def to_html_string(element: etree.Element):
 
 
 class Markdown(markdown.Markdown):
-    doc_tag = "article"
+    doc_tag = "div"
     output_formats = {"html": to_html_string}
 
 

@@ -20,7 +20,7 @@ class Page:
     def from_markdown(cls, path: Path):
         head, body = path.read_text().split("\n---\n", 1)
         meta = yaml.load(head, Loader=YamlLoader)
-        content = md.convert(body)
+        content = md.convert(body).strip("<div>").rstrip("</div>")
         title = meta.get("title", None)
         description = meta.get("description", None)
 
