@@ -1,23 +1,25 @@
 files: "^src/"
-default_stages: [push]
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
+    stages: [commit]
     rev: v4.0.1
-    default_stages: [commit]
     hooks:
       - id: detect-private-key
       - id: debug-statements
       - id: check-added-large-files
 
   - repo: https://github.com/psf/black
+    stages: [push]
     rev: 22.3.0
     hooks:
       - id: black
   - repo: https://github.com/PyCQA/isort
+    stages: [push]
     rev: 5.10.1
     hooks:
       - id: isort
   - repo: https://github.com/PyCQA/flake8
+    stages: [push]
     rev: 4.0.1
     hooks:
       - id: flake8
