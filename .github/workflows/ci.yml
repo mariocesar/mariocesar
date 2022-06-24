@@ -47,6 +47,9 @@ jobs:
         with:
           name: output
 
+      - name: List all files
+        run: find . -type f
+
       - run: netlify deploy --prod --dir=out
         env:
           NETLIFY_AUTH_TOKEN: "${{secrets.NETLIFY_AUTH_TOKEN}}"
