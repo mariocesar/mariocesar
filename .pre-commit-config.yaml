@@ -9,17 +9,17 @@ repos:
       - id: check-added-large-files
 
   - repo: https://github.com/psf/black
-    stages: [push]
     rev: 22.3.0
     hooks:
       - id: black
+        stages: [push]
   - repo: https://github.com/PyCQA/isort
-    stages: [push]
     rev: 5.10.1
     hooks:
       - id: isort
+        stages: [push]
   - repo: https://github.com/PyCQA/flake8
-    stages: [push]
     rev: 4.0.1
     hooks:
       - id: flake8
+        stages: [push]
