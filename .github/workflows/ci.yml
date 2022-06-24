@@ -7,7 +7,6 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
 
@@ -24,9 +23,8 @@ jobs:
       - name: flake8
         run: "poetry run flake8 src/ ||:"
 
-  deploy:
+  build:
     runs-on: ubuntu-latest
-    needs: [test]
     steps:
       - uses: actions/checkout@v2
 
@@ -39,9 +37,21 @@ jobs:
           set -eux
           make build
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - uses: actions/upload-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out
-          cname: mariocesar.xyz
+          name: output
+          path: out/
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [test, build]
+    steps:
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.13.x
+          cache: npm
+
+      - run: npm install netlify-cli -g
+
+      - run: netlify deploy --prod --dir=out
