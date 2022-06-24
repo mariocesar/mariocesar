@@ -43,6 +43,10 @@ jobs:
 
       - run: npm install netlify-cli -g
 
+      - uses: actions/download-artifact@v3
+        with:
+          name: output
+
       - run: netlify deploy --prod --dir=out
         env:
           NETLIFY_AUTH_TOKEN: "${{secrets.NETLIFY_AUTH_TOKEN}}"
