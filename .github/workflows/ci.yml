@@ -40,14 +40,18 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: output
-          path: out/
+          path: |
+            out/
+            netlify.toml
           retention-days: 5
 
   deploy:
     runs-on: ubuntu-latest
     needs: [test, build]
     steps:
-      - run: npm config set prefix '~/.npm'
+      - run: |
+          npm config --global set prefix '~/.npm'
+          npm config --global set audit false
 
       - uses: actions/cache@v2
         with:
