@@ -5,7 +5,7 @@ description: I’m a software developer here is my site and Blog
 
 # 👋🏼 Hello,<br>I’m Mario−César Señoranis
 
-I'm a software developer trying to write more, create exciting software, share what I know, and for the most, just be the best Dad I can be. I Work at ⚡️ [zapier.com](https://zapier.com/) as an Integration Software Engineer. I also work at [humanzilla.com](https://humanzilla.com), a small two-person software agency with my Wife.
+I'm a software developer trying to write more, create exciting software, share what I know, and for the most, just be the best Dad I can be. I Work at [tugerente.com](https://tugerente.com/) as CTO. I also work at [humanzilla.com](https://humanzilla.com), a small two-person software agency with my Wife.
 
 I was born, live, and work in Santa Cruz de la Sierra, Bolivia.
 
