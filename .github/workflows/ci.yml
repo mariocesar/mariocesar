@@ -21,36 +21,15 @@ jobs:
 
       - uses: actions/upload-artifact@v3
         with:
-          name: output
+          name: github-pages
           path: |
             out/
-            netlify.toml
           retention-days: 5
 
   deploy:
     runs-on: ubuntu-latest
     needs: [build]
     steps:
-      - run: |
-          npm config set prefix '~/.npm'
-          npm config set audit false
-          npm config set fund false
-
-      - uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: node_modules
-
-      - run: npm install netlify-cli -g
-
-      - uses: actions/download-artifact@v3
-        with:
-          name: output
-
-      - name: List all files
-        run: find . -type f
-
-      - run: netlify deploy --site ${NETLIFY_SITE_ID} --prod --dir=out
-        env:
-          NETLIFY_AUTH_TOKEN: "${{secrets.NETLIFY_AUTH_TOKEN}}"
-          NETLIFY_SITE_ID: "${{secrets.NETLIFY_SITE_ID}}"
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
