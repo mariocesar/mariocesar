@@ -6,7 +6,7 @@ authors = ["Mario César <mariocesar.c50@gmail.com>"]
 packages = [{ include = "builder", from = "src" }]
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.10,>3.11"
 Jinja2 = "^3.1.1"
 PyYAML = "^6.0"
 yattag = "^1.14.0"
