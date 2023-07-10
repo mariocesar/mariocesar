@@ -1,6 +1,6 @@
 ---
 title: Mario−César Señoranis | Software Developer
-description: I’m a software developer here is my site and Blog
+description: I’m a software developer. Here is my site and Blog
 ---
 
 # 👋🏼 Hello,<br>I’m Mario−César Señoranis
