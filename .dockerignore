@@ -1,9 +1,0 @@
-/.vscode
-/.idea
-/.git*
-/.github
-/.dockerignore
-
-/out
-/Dockerfile
-/Makefile

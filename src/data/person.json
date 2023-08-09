@@ -1,0 +1,49 @@
+{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://mariocesar.xyz/",
+    "abstract": "I'm a software developer here is my Personal site and Blog",
+    "keywords": [
+        "python",
+        "django",
+        "bolivia",
+        "santa cruz de la sierra",
+        "mariocesar",
+        "mariocesar_bo",
+        "zapier",
+        "tuGerente",
+        "software engineer"
+    ],
+    "mainEntity": {
+        "@type": "Person",
+        "@context": "http://schema.org",
+        "familyName": "Se\u00f1oranis Ayala",
+        "givenName": "Mario C\u00e9sar",
+        "jobTitle": "CTO",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "tuGerente"
+        },
+        "image": "https://mariocesar.xyz/mariocesar.jpg",
+        "gender": "http://schema.org/Male",
+        "sameAs": [
+            "https://mariocesar.xyz/",
+            "https://twitter.com/mariocesar_bo",
+            "https://www.linkedin.com/in/mariocesar/",
+            "https://facebook.com/mariocesar",
+            "https://instagram.com/mariocesar_bo",
+            "https://github.com/mariocesar",
+            "https://joinclubhouse.com/@mariocesar"
+        ]
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Mario C\u00e9sar Se\u00f1oranis",
+        "url": "https://mariocesar.xyz"
+    },
+    "publisher": {
+        "@type": "Person",
+        "name": "Mario C\u00e9sar Se\u00f1oranis",
+        "url": "https://mariocesar.xyz"
+    }
+}
