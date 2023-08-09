@@ -4,6 +4,7 @@ export default function Document() {
   return (
     <Html lang="en" className="h-full bg-white lg:bg-gray-50">
       <Head>
+        <link rel="shortcut icon" href="favicon.ico" />
         <meta name="robots" content="follow, index" />
         <meta content="#ffffff" name="theme-color" />
         <meta content="#ffffff" name="msapplication-TileColor" />
