@@ -1,6 +1,6 @@
 # 👋🏼 Hello, I’m Mario-César Señoranis!
 
-I'm a software developer striving to write more, create  software, share my knowledge, and be the best Dad I can be. I am currently a Software Engineer in the Integrations Team at [Tesorio.com](https://tesorio.com). Together with my wife, I run a small software agency [Humanzilla.com](https://humanzilla.com). Additionally, I serve as the CTO at [tugerente.com](https://tugerente.com/).
+I'm a software developer striving to write more, create  software, share my knowledge, and be the best Dad I can be. I am currently a Software Engineer in the Integrations Team at [Tesorio.com](https://tesorio.com). Together with my wife, I run a small software agency [Humanzilla.com](https://humanzilla.com). Additionally, I serve as the CTO at [tuGerente.com](https://tugerente.com/).
 
 I was born, live, and work in Santa Cruz de la Sierra, Bolivia.
 
