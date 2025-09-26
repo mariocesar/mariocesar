@@ -1,0 +1,36 @@
+name: Poetry setup
+description: Python environment setup with poetry
+
+inputs:
+  prefix:
+    description: "Prefix for cache keys"
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-python@v2
+      with:
+        python-version: "3.10"
+
+    - uses: actions/cache@v2
+      with:
+        path: ~/.local
+        key: poetry-0
+
+    - uses: snok/install-poetry@master
+      with:
+        virtualenvs-create: true
+        virtualenvs-in-project: true
+
+    - uses: actions/cache@v1
+      id: poetry-lock
+      with:
+        path: .venv
+        key: ${{ inputs.prefix }}-venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+
+    - name: Install dependencies
+      if: steps.poetry-lock.outputs.cache-hit != 'true'
+      shell: bash
+      run: |
+        poetry install --no-interaction

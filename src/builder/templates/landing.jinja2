@@ -1,0 +1,32 @@
+{% extends "_layouts/base.jinja2" %}
+
+{% block title %}{{ page.title }}{% endblock %}
+{% block extrahead -%}
+  <meta name="google-site-verification" content="CPziVTiDUu4mYTO0W7b63PVGE2YKC5lp7Uz-XiIkEWs" /> {# pragma: allowlist secret #}
+  <meta name="description" content="{{ page.description }}" />
+  <meta name="author" content="Mario-César Señoranis" />
+  <link rel="canonical" itemProp="url" href="{{ site.url }}" />
+  <link rel="author" href="{{ site.url }}" />
+  {% if page.title -%}
+  <meta name="twitter:title" content="{{ page.title }}" />
+  <meta property="og:title" content="{{ page.title }}" />
+  <meta property="og:site_name" itemProp="name" content="{{ page.title }}" />
+  {% endif -%}
+  <meta property="og:url" content="{{ site.url }}" />
+  <meta property="og:type" content="blog" />
+  {% if page.description -%}
+  <meta property="og:description" content="{{ page.description }}" />
+  <meta name="twitter:description" content="{{ page.description }}" />
+  {% endif -%}
+  <meta property="article:publisher" content="{{ site.url }}" />
+  <meta name="twitter:site" content="@mariocesar_bo" />
+  <script type="application/ld+json">
+  {{ yaml2json("./data/schema_website.yml")|safe|indent(4) }}
+  </script>
+{%- endblock %}
+
+{% block body -%}
+    <article class="prose prose-stone mx-auto prose-h1:tracking-tight text-gray-700 lg:prose-h1:leading-snug">
+    {{ page.content|safe|indent(4) }}
+    </article>
+{%- endblock %}

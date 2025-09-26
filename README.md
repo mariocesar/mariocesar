@@ -1,23 +1,25 @@
-# 👋🏼 Hello, I’m Mario-César Señoranis!
+---
+title: Mario−César Señoranis | Software Developer
+description: I’m a software developer. Here is my site and Blog
+---
 
-I'm a software developer striving to write more, create  software, share my knowledge, and be the best Dad I can be. I am currently a Software Engineer in the Integrations Team at [Tesorio.com](https://tesorio.com). Together with my wife, I run a small software agency [Humanzilla.com](https://humanzilla.com). Additionally, I serve as the CTO at [tuGerente.com](https://tugerente.com/).
+# 👋🏼 Hello,<br>I’m Mario−César Señoranis
+
+I'm a software developer trying to write more, create exciting software, share what I know, and for the most, just be the best Dad I can be. I Work at [tugerente.com](https://tugerente.com/) as CTO. I also work at [humanzilla.com](https://humanzilla.com), a small two-person software agency with my Wife.
 
 I was born, live, and work in Santa Cruz de la Sierra, Bolivia.
 
-Welcome to my corner of the internet.
+And you've found my tiny slice of the internet.
 
 You can also find me:
 
-- 🧑🏽‍💻 Discussing work on [LinkedIn](https://linkedin.com/in/mariocesar)
-- 📸 Sharing photos on [Instagram](https://instagram.com/mariocesar_xyz)
-- 🎙 Speaking on [Clubhouse](https://joinclubhouse.com/@mariocesar)
-  - ☕️ I host a daily room called "Club del Desayuno" every day at 9 am about Accountability and Networking. [Join us](https://joinclubhouse.com/club/club-del-desayuno).
-- ⌨️ Sharing code and projects on [github.com/mariocesar](https://github.com/mariocesar), including this website’s code on [github.com/mariocesar/mariocesar](https://github.com/mariocesar/mariocesar).
-  - 🗒 Posting helpful code snippets on [Gist](https://gist.github.com/mariocesar).
-- 📺 Coding live and chatting on [Twitch](https://twitch.tv/mariocesar_xyz) during weekends and sometimes randomly.
-  - 📼 Streaming simultaneously on my [YouTube Channel](https://youtube.com/channel/), where you can find some of my recorded sessions.
-- 💭 Sharing and discussing on:
-  - 🐦 [X (formerly Twitter)](https://x.com/mariocesar_xyz)
-  - 🧵 [Threads](https://threads.net/@mariocesar_xyz)
-
-Thank you for visiting. I hope you find something useful.
+- 🧑🏽‍💻 Talking about work at LinkedIn [linkedin.com/in/mariocesar](https://linkedin.com/in/mariocesar/)
+- 📸 Sharing pretty photos on Instagram [instagram.com/mariocesar_bo](https://instagram.com/mariocesar_bo/)
+- 🎙 Speaking in Clubhouse [joinclubhouse.com/@mariocesar](https://joinclubhouse.com/@mariocesar)
+  - ☕️ I host a daily room at the club "Club del Desayuno" every day at 9 am about Accountability and Networking.
+  - 🎉 Go to [joinclubhouse.com/club/club-del-desayuno](https://joinclubhouse.com/club/club-del-desayuno) to participate.
+- ⌨️ Sharing code and projects in [github.com/mariocesar](https://github.com/mariocesar), like this same website [github.com/mariocesar/mariocesar](https://github.com/mariocesar/mariocesar)
+  - 🗒 I post without a particular order helpful bits of code at [gist.github.com/mariocesar](https://gist.github.com/mariocesar) that are sometimes worthy of looking at.
+- 📺 You can watch me code live and chat with me on [twitch.tv/mariocesar_xyz](https://www.twitch.tv/mariocesar_xyz) at weekends and sometimes randomly on any given day
+  - 📼 When I stream, I do it simultaneously on [my YouTube Channel](https://www.youtube.com/channel/UCW7WUg3fWY4QHQTNsSEdNFQ), I host some recordings there that someday I will remove 😅
+- 🐦 Saying little on Twitter [twitter.com/mariocesar_bo](https://twitter.com/mariocesar_bo)
