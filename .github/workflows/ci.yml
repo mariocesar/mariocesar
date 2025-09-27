@@ -1,4 +1,4 @@
-name: Tests
+name: CI
 
 on:
   push:
@@ -9,30 +9,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: ./.github/workflows/python
-
       - name: build
         run: |
           set -eux
           make build
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-pages-artifact@v3
         with:
-          name: github-pages
           path: |
             out/
           retention-days: 5
 
   deploy:
-    runs-on: ubuntu-latest
-    needs: [build]
-    permissions:
-      pages: write
-      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
