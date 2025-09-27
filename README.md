@@ -1,25 +1,28 @@
 ---
-title: Mario−César Señoranis | Software Developer
-description: I’m a software developer. Here is my site and Blog
+title: Mario-César Señoranis | Software Developer & CTO in Bolivia
+description: Software developer & CTO in Santa Cruz, Bolivia. I run Humanzilla, build Django apps and API integrations (Zapier), and talk LatAm startups at tuGerente.
 ---
 
-# 👋🏼 Hello,<br>I’m Mario−César Señoranis
+# 👋🏼 Hello, I'm Mario-César Señoranis!
 
-I'm a software developer trying to write more, create exciting software, share what I know, and for the most, just be the best Dad I can be. I Work at [tugerente.com](https://tugerente.com/) as CTO. I also work at [humanzilla.com](https://humanzilla.com), a small two-person software agency with my Wife.
+I'm a software developer who writes, builds, and shares what I learn. I run a small software agency, [Humanzilla.com](https://humanzilla.com) with my wife, and I serve as CTO at [tuGerente.com](https://tugerente.com/) a LatAm Startup from Bolivia.
 
-I was born, live, and work in Santa Cruz de la Sierra, Bolivia.
+Earlier, I was on the Integrations teams at [Zapier](https://zapier.com) and at [Tesorio](https://tesorio.com), building app connectors and API integrations, having fun with webhooks, data ingestion, and large-scale workflows across ERPs, billing tools, and CRMs.
 
-And you've found my tiny slice of the internet.
+If you have a niche project with Django, Automations, Zapier connectors, ETL pipelines, or legacy upgrades, send us a message on [Humanzilla’s LinkedIn](https://www.linkedin.com/company/humanzilla/). If you want to talk startups in LatAm, especially SMB ops, inventory/POS, team building, and growth, message me on [LinkedIn](https://www.linkedin.com/in/mariocesar).
+
+Welcome to my corner of the internet.
 
 You can also find me:
 
-- 🧑🏽‍💻 Talking about work at LinkedIn [linkedin.com/in/mariocesar](https://linkedin.com/in/mariocesar/)
-- 📸 Sharing pretty photos on Instagram [instagram.com/mariocesar_bo](https://instagram.com/mariocesar_bo/)
-- 🎙 Speaking in Clubhouse [joinclubhouse.com/@mariocesar](https://joinclubhouse.com/@mariocesar)
-  - ☕️ I host a daily room at the club "Club del Desayuno" every day at 9 am about Accountability and Networking.
-  - 🎉 Go to [joinclubhouse.com/club/club-del-desayuno](https://joinclubhouse.com/club/club-del-desayuno) to participate.
-- ⌨️ Sharing code and projects in [github.com/mariocesar](https://github.com/mariocesar), like this same website [github.com/mariocesar/mariocesar](https://github.com/mariocesar/mariocesar)
-  - 🗒 I post without a particular order helpful bits of code at [gist.github.com/mariocesar](https://gist.github.com/mariocesar) that are sometimes worthy of looking at.
-- 📺 You can watch me code live and chat with me on [twitch.tv/mariocesar_xyz](https://www.twitch.tv/mariocesar_xyz) at weekends and sometimes randomly on any given day
-  - 📼 When I stream, I do it simultaneously on [my YouTube Channel](https://www.youtube.com/channel/UCW7WUg3fWY4QHQTNsSEdNFQ), I host some recordings there that someday I will remove 😅
-- 🐦 Saying little on Twitter [twitter.com/mariocesar_bo](https://twitter.com/mariocesar_bo)
+- 🧑🏽‍💻 Discussing work on [LinkedIn](https://linkedin.com/in/mariocesar)
+- 📸 Sharing photos on [Instagram](https://instagram.com/mariocesar_xyz)
+- ⌨️ Sharing code and projects on [github.com/mariocesar](https://github.com/mariocesar), including this website's code on [github.com/mariocesar/mariocesar](https://github.com/mariocesar/mariocesar).
+  - 🗒 Posting helpful code snippets on [Gist](https://gist.github.com/mariocesar).
+- 📺 Coding live and chatting on [Twitch](https://twitch.tv/mariocesar_xyz) during weekends and sometimes randomly.
+  - 📼 Streaming simultaneously on my [YouTube Channel](https://youtube.com/channel/), where you can find some of my recorded sessions.
+
+Thank you for visiting. I hope you find something useful.
+
+*[LatAm]: Latin America
+*[SMB]: Small and medium-sized businesses

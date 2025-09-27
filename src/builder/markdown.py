@@ -32,7 +32,9 @@ INDENT = "  "
 
 
 def render_attrs(obj: Dict[str, str]) -> str:
-    return " ".join(f'{key}="{_escape_attrib_html(value)}"' for key, value in obj.items())
+    return " ".join(
+        f'{key}="{_escape_attrib_html(value)}"' for key, value in obj.items()
+    )
 
 
 class LinkProcessor(LinkInlineProcessor):
@@ -163,6 +165,6 @@ class Markdown(markdown.Markdown):
 
 md = Markdown(
     output_format="html5",
-    extensions=[MarkdownExtension(), "mdx_truly_sane_lists"],
+    extensions=[MarkdownExtension(), "mdx_truly_sane_lists", "extra"],
 )
 md.stripTopLevelTags = False

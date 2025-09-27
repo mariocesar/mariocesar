@@ -1,25 +1,15 @@
 
-defualt:
-	poetry install
-
-fix:
-	poetry run isort src/
-	poetry run black src/
-	poetry run flake8 src/
-
-check:
-	poetry run isort --diff --check src/
-	poetry run black --diff --check src/
-	poetry run flake8 src/
+default:
+	uv sync
 
 serve:
-	poetry run uvicorn --reload --port=8000 builder.app:app
+	uv run uvicorn --reload --port=8000 builder.app:app
 
 build:
 	rm -rf out
 	rm -f pidfile
 
-	nohup poetry run uvicorn \
+	nohup uv run uvicorn \
 		--host=127.0.0.1 \
 		--port=8000 \
 		builder.app:app \

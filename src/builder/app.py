@@ -2,7 +2,7 @@ from datetime import datetime
 from pathlib import Path
 
 from fastapi import FastAPI, Request
-from fastapi.responses import HTMLResponse, PlainTextResponse
+from fastapi.responses import FileResponse, HTMLResponse, PlainTextResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from yattag import Doc
@@ -18,13 +18,25 @@ class XMLTextResponse(PlainTextResponse):
 
 BASE_DIR = Path(__file__).parent.resolve()
 
+PUBLIC_DIR = (BASE_DIR / "../../public").resolve()
+STATIC_DIR = (PUBLIC_DIR / "static").resolve()
+
 app = FastAPI()
 
 app.mount(
     "/static",
-    StaticFiles(directory=(BASE_DIR / "../../public/static").resolve()),
+    StaticFiles(directory=STATIC_DIR),
     name="static",
 )
+
+
+@app.get("/favicon.ico", response_class=PlainTextResponse)
+async def favicon():
+    return FileResponse(
+        (PUBLIC_DIR / "favicon.ico").resolve(),
+        media_type="image/x-icon",
+    )
+
 
 templates = Jinja2Templates(directory=BASE_DIR / "templates")
 templates.env.globals["yaml2json"] = yaml2json
