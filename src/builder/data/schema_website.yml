@@ -18,9 +18,6 @@ mainEntity:
   familyName: Señoranis Ayala
   givenName: Mario César
   jobTitle: Senior Software Engineer
-  worksFor:
-    "@type": Organization
-    name: Zapier
   image: https://mariocesar.xyz/mariocesar.jpg
   gender: http://schema.org/Male
   sameAs:

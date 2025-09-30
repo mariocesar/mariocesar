@@ -16,10 +16,16 @@ class XMLTextResponse(PlainTextResponse):
     media_type = "text/xml"
 
 
-BASE_DIR = Path(__file__).parent.resolve()
+class FaviconResponse(FileResponse):
+    media_type = "image/x-icon"
 
-PUBLIC_DIR = (BASE_DIR / "../../public").resolve()
+
+APP_DIR = Path(__file__).parent.resolve()
+ROOT_DIR = (APP_DIR / "../..").resolve()
+DATA_DIR = (APP_DIR / "data").resolve()
+PUBLIC_DIR = (ROOT_DIR / "public").resolve()
 STATIC_DIR = (PUBLIC_DIR / "static").resolve()
+
 
 app = FastAPI()
 
@@ -30,21 +36,18 @@ app.mount(
 )
 
 
-@app.get("/favicon.ico", response_class=PlainTextResponse)
+@app.get("/favicon.ico", response_class=FaviconResponse)
 async def favicon():
-    return FileResponse(
-        (PUBLIC_DIR / "favicon.ico").resolve(),
-        media_type="image/x-icon",
-    )
+    return FaviconResponse((PUBLIC_DIR / "favicon.ico").resolve())
 
 
-templates = Jinja2Templates(directory=BASE_DIR / "templates")
+templates = Jinja2Templates(directory=APP_DIR / "templates")
 templates.env.globals["yaml2json"] = yaml2json
 
 
 @app.get("/", response_class=HTMLResponse)
 async def landing(request: Request):
-    page = Page.from_markdown(BASE_DIR / "../../README.md")
+    page = Page.from_markdown(ROOT_DIR / "README.md")
     return templates.TemplateResponse(
         "landing.jinja2",
         media_type="text/html",
@@ -56,11 +59,17 @@ async def landing(request: Request):
     )
 
 
+@app.get("/llms.txt", response_class=HTMLResponse)
+async def llms(request: Request):
+    page = (ROOT_DIR / "README.md").read_text()
+    return PlainTextResponse(content=page, media_type="text/plain")
+
+
 @app.get("/sitemap.xml", response_class=XMLTextResponse)
 async def sitemap():
     doc, tag, text = Doc().tagtext()
     doc.asis('<?xml version="1.0" encoding="UTF-8"?>\n')
-    sitemap = load_yaml(BASE_DIR / "data/sitemap.yml")
+    sitemap = load_yaml(DATA_DIR / "sitemap.yml")
 
     with tag(
         "urlset",
