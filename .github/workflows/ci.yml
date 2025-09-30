@@ -14,12 +14,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: extractions/setup-just@v3
       - uses: ./.github/workflows/python
       - name: build
         run: |
           set -eux
-          make build
-
+          just build
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out/
