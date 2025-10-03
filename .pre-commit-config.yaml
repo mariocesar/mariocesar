@@ -4,32 +4,24 @@ repos:
     rev: v4.0.1
     hooks:
       - id: detect-aws-credentials
-        stages: [commit]
+        stages: [pre-commit]
       - id: detect-private-key
-        stages: [commit]
+        stages: [pre-commit]
       - id: debug-statements
-        stages: [commit]
+        stages: [pre-commit]
       - id: check-added-large-files
-        stages: [commit]
+        stages: [pre-commit]
 
   - repo: https://github.com/Yelp/detect-secrets
     rev: v1.2.0
     hooks:
       - id: detect-secrets
-        stages: [commit]
+        stages: [pre-commit]
 
-  - repo: https://github.com/psf/black
-    rev: 22.3.0
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.13.3
     hooks:
-      - id: black
-        stages: [push]
-  - repo: https://github.com/PyCQA/isort
-    rev: 5.10.1
-    hooks:
-      - id: isort
-        stages: [push]
-  - repo: https://github.com/PyCQA/flake8
-    rev: 4.0.1
-    hooks:
-      - id: flake8
-        stages: [push]
+      - id: ruff-check
+        stages: [pre-commit]
+      - id: ruff-format
+        stages: [pre-commit]
