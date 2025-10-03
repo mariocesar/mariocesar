@@ -19,8 +19,6 @@ You can also find me:
 - 📸 Sharing photos on [Instagram](https://instagram.com/mariocesar_xyz)
 - ⌨️ Sharing code and projects on [github.com/mariocesar](https://github.com/mariocesar), including this website's code on [github.com/mariocesar/mariocesar](https://github.com/mariocesar/mariocesar).
   - 🗒 Posting helpful code snippets on [Gist](https://gist.github.com/mariocesar).
-- 📺 Coding live and chatting on [Twitch](https://twitch.tv/mariocesar_xyz) during weekends and sometimes randomly.
-  - 📼 Streaming simultaneously on my [YouTube Channel](https://youtube.com/channel/), where you can find some of my recorded sessions.
 
 Thank you for visiting. I hope you find something useful.
 
