@@ -1,19 +1,19 @@
 [project]
     name = "mariocesar-xyz"
     version = "0.1.0"
-    description = "Add your description here"
+    description = "Static site builder for mariocesar.xyz"
     readme = "README.md"
     requires-python = ">=3.11"
     dependencies = [
-        "click>=8.3.0",
-        "fastapi>=0.117.1",
         "jinja2>=3.1.6",
         "markdown>=3.9",
         "mdx-truly-sane-lists>=1.3",
         "pyyaml>=6.0.3",
-        "uvicorn>=0.37.0",
-        "watchdog>=6.0.0",
-        "yattag>=1.16.1",
+    ]
+
+[dependency-groups]
+    dev = [
+        "pytest>=8.3.0",
     ]
 
 [tool.hatch.build.targets.wheel]
