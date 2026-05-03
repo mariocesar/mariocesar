@@ -131,6 +131,28 @@ a:hover {
     color: #000;
 }
 
+pre {
+    background: #18202b;
+    border-radius: 8px;
+    color: #f7f9fc;
+    line-height: 1.55;
+    overflow-x: auto;
+    padding: 1rem;
+}
+
+pre code {
+    color: inherit;
+    font-size: 0.9rem;
+}
+
+:not(pre)>code {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    font-size: 0.9em;
+    padding: 0.05rem 0.25rem;
+}
+
 article {
     margin-bottom: 3rem;
 }

@@ -15,10 +15,10 @@ def test_readme_renders_as_homepage():
 def test_articles_load_with_metadata_sorted_newest_first():
     articles = load_articles()
 
-    assert [article.url for article in articles] == [
-        "/articles/static-websites-are-enough/",
-        "/articles/readme-as-homepage/",
-    ]
+    urls = [article.url for article in articles]
+    assert "/articles/django-template-components-without-react/" in urls
+    assert "/articles/django-admin-actions-should-be-forms/" in urls
+    assert "/articles/state-as-timestamp-query-as-boolean/" in urls
     assert articles[0].summary
 
 
@@ -45,6 +45,7 @@ def test_rss_includes_articles():
 
     titles = [element.text for element in root.findall("./channel/item/title")]
     assert "Static Websites Are Usually Enough" in titles
+    assert "Django Template Components Without React" in titles
     assert "README as Homepage" in titles
 
 
