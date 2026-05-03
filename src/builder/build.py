@@ -52,7 +52,9 @@ def build(out_dir: Path = OUT_DIR) -> None:
     for article in articles:
         render_page(env, out_dir, article, site=site, articles=articles)
 
-    write_text(out_dir / "llms.txt", (ROOT_DIR / "README.md").read_text())
+    llms_content = (ROOT_DIR / "README.md").read_text()
+    write_text(out_dir / "llms.txt", llms_content)
+    write_text(out_dir / "llm.txt", llms_content)
     write_text(out_dir / "robots.txt", robots_txt())
     write_xml(out_dir / "sitemap.xml", sitemap_xml(site, pages))
     write_xml(out_dir / "articles" / "rss.xml", rss_xml(site, articles))

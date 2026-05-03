@@ -52,6 +52,8 @@ def test_static_build_writes_expected_files(tmp_path):
     build(tmp_path)
 
     assert (tmp_path / "index.html").exists()
+    assert (tmp_path / "llm.txt").exists()
+    assert (tmp_path / "llms.txt").exists()
     assert (tmp_path / "articles" / "index.html").exists()
     assert (tmp_path / "articles" / "rss.xml").exists()
     assert (tmp_path / "sitemap.xml").exists()
