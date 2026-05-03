@@ -5,15 +5,15 @@
   <meta name="google-site-verification" content="CPziVTiDUu4mYTO0W7b63PVGE2YKC5lp7Uz-XiIkEWs" /> {# pragma: allowlist secret #}
   <meta name="description" content="{{ page.description }}" />
   <meta name="author" content="Mario-César Señoranis" />
-  <link rel="canonical" itemProp="url" href="{{ site.url }}" />
+  <link rel="canonical" itemProp="url" href="{{ site.url }}{{ page.url if page.url != '/' else '' }}" />
   <link rel="author" href="{{ site.url }}" />
   {% if page.title -%}
   <meta name="twitter:title" content="{{ page.title }}" />
   <meta property="og:title" content="{{ page.title }}" />
   <meta property="og:site_name" itemProp="name" content="{{ page.title }}" />
   {% endif -%}
-  <meta property="og:url" content="{{ site.url }}" />
-  <meta property="og:type" content="blog" />
+  <meta property="og:url" content="{{ site.url }}{{ page.url if page.url != '/' else '' }}" />
+  <meta property="og:type" content="website" />
   {% if page.description -%}
   <meta property="og:description" content="{{ page.description }}" />
   <meta name="twitter:description" content="{{ page.description }}" />
@@ -26,7 +26,25 @@
 {%- endblock %}
 
 {% block body -%}
-    <article>
+    <article class="home-intro">
     {{ page.content|safe|indent(4) }}
     </article>
+
+    <section class="article-preview" aria-labelledby="articles-heading">
+      <div class="section-heading">
+        <h2 id="articles-heading">Articles</h2>
+        <a href="/articles/">View all</a>
+      </div>
+      <div class="article-list">
+        {% for article in articles[:3] %}
+        <article class="article-card">
+          <time datetime="{{ article.lastmod.isoformat() }}">{{ display_date(article.lastmod) }}</time>
+          <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
+          {% if article.summary -%}
+          <p>{{ article.summary }}</p>
+          {%- endif %}
+        </article>
+        {% endfor %}
+      </div>
+    </section>
 {%- endblock %}
