@@ -5,7 +5,7 @@
   {% if page.description -%}
   <meta name="description" content="{{ page.description }}" />
   {%- endif %}
-  <link rel="canonical" href="{{ site.url }}{{ page.url if page.url != '/' else '' }}" />
+  <link rel="canonical" href="{{ canonical_url(site, page) }}" />
 {%- endblock %}
 
 {% block body -%}

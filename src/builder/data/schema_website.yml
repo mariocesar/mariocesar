@@ -1,7 +1,9 @@
 "@context": https://schema.org
 "@type": WebSite
 url: https://mariocesar.xyz/
-abstract: I'm a software developer here is my Personal site and Blog
+name: Mario-César Señoranis
+description: Software developer & CTO in Santa Cruz, Bolivia.
+abstract: Personal site and articles by Mario-César Señoranis.
 keywords:
   - python
   - bolivia
@@ -14,20 +16,16 @@ keywords:
   - software engineer
 mainEntity:
   "@type": Person
-  "@context": http://schema.org
+  "@context": https://schema.org
   familyName: Señoranis Ayala
   givenName: Mario César
-  jobTitle: Senior Software Engineer
+  jobTitle: Software Developer & CTO
   image: https://mariocesar.xyz/static/icons/icon-512.png
-  gender: http://schema.org/Male
   sameAs:
     - https://mariocesar.xyz/
-    - https://twitter.com/mariocesar_bo
     - https://www.linkedin.com/in/mariocesar/
-    - https://facebook.com/mariocesar
-    - https://instagram.com/mariocesar_bo
+    - https://instagram.com/mariocesar_xyz
     - https://github.com/mariocesar
-    - https://joinclubhouse.com/@mariocesar
 author:
   "@type": Person
   name: Mario César Señoranis

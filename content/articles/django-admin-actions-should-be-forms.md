@@ -3,6 +3,7 @@ title: Django Admin Actions Should Be Forms
 description: A decorator pattern for giving Django admin actions a confirmation form before mutating objects.
 summary: Django admin actions are more useful when they can ask for input, validate it, and then apply the change.
 date: 2026-05-02
+updated: 2026-05-03
 ---
 
 # Django Admin Actions Should Be Forms
@@ -45,3 +46,21 @@ The nice thing about the decorator is that it keeps the admin action contract sm
 There are limits. For long-running jobs, the action should enqueue work and return quickly. For destructive actions, the confirmation page should show enough object context to make mistakes unlikely. For permission-sensitive actions, the decorator should not be the only line of defense.
 
 Still, this is the kind of small extension that makes Django admin feel like a production tool instead of a demo backend. You do not need a separate dashboard for every internal workflow. Sometimes you just need a form in front of an action.
+
+## FAQ
+
+### Should every Django admin action use a form?
+
+No. If the action has no choices and no risk, keep it plain. A form is useful when the action needs user input, file upload, validation, or a confirmation step that explains what will happen.
+
+### Why not build a custom admin view instead?
+
+A custom admin view is better for a full workflow. A form-backed action is better for a single bulk operation that still belongs to the selected queryset.
+
+### What is the common footgun?
+
+Losing the selected objects between the first confirmation page and the final POST. The decorator should preserve the selected IDs and treat the form submission as the second half of the same admin action.
+
+### Should long-running actions execute inside the request?
+
+Usually no. Validate the form in the admin action, enqueue a background job, and show the user that the job started. The admin request should not become a worker process.

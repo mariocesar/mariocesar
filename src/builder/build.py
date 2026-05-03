@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import shutil
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass
@@ -24,6 +25,7 @@ class Site:
     url: str = SITE_URL
     title: str = "Mario-César Señoranis"
     description: str = "Software developer & CTO in Santa Cruz, Bolivia."
+    image_url: str = f"{SITE_URL}/static/icons/icon-512.png"
 
 
 def build(out_dir: Path = OUT_DIR) -> None:
@@ -67,6 +69,8 @@ def template_environment() -> Environment:
     )
     env.globals["yaml2json"] = yaml2json
     env.globals["display_date"] = display_date
+    env.globals["canonical_url"] = canonical_url
+    env.globals["article_schema"] = article_schema
     return env
 
 
@@ -117,6 +121,12 @@ def absolute_url(site: Site, url: str) -> str:
     return f"{site.url}{url}"
 
 
+def canonical_url(site: Site, page: Page) -> str:
+    if page.url == "/":
+        return site.url
+    return absolute_url(site, page.url)
+
+
 def sitemap_xml(site: Site, pages: list[Page]) -> str:
     ET.register_namespace("", "http://www.sitemaps.org/schemas/sitemap/0.9")
     urlset = ET.Element("{http://www.sitemaps.org/schemas/sitemap/0.9}urlset")
@@ -162,11 +172,40 @@ def display_date(value) -> str:
     return value.strftime("%b %d, %Y").replace(" 0", " ")
 
 
+def article_schema(site: Site, page: Page) -> str:
+    return json.dumps(
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": page.title,
+            "description": page.description or page.summary,
+            "url": canonical_url(site, page),
+            "mainEntityOfPage": canonical_url(site, page),
+            "image": site.image_url,
+            "datePublished": page.date.isoformat() if page.date else None,
+            "dateModified": page.lastmod.isoformat(),
+            "author": {
+                "@type": "Person",
+                "name": site.title,
+                "url": site.url,
+            },
+            "publisher": {
+                "@type": "Person",
+                "name": site.title,
+                "url": site.url,
+            },
+        },
+        ensure_ascii=False,
+        indent=2,
+    )
+
+
 def robots_txt() -> str:
     return """User-agent: *
 Allow:
 
 Sitemap: https://mariocesar.xyz/sitemap.xml
+Sitemap: https://mariocesar.xyz/articles/rss.xml
 """
 
 

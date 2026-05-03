@@ -3,6 +3,7 @@ title: Django Template Components Without React
 description: A small component pattern for Django templates using two custom tags and no frontend build step.
 summary: Django templates can get a useful component primitive with define/render tags, props, and children.
 date: 2026-05-03
+updated: 2026-05-03
 ---
 
 # Django Template Components Without React
@@ -43,3 +44,21 @@ The tradeoff is real: this is not a design system. There is no type checker, no 
 But for small and medium Django apps, that tradeoff is often fine. The code stays close to the HTML. The server still renders the page. The component is just enough structure to keep templates from turning into copy-pasted walls.
 
 The lesson I keep coming back to: before adding a frontend architecture, try adding the missing primitive to the system you already have.
+
+## FAQ
+
+### Is this a replacement for React?
+
+No. It is a replacement for copy-pasted server-rendered markup. If the UI needs rich client-side state, use the right frontend tool. If the page is mostly HTML with repeated fragments, Django can carry more of the weight.
+
+### Why not use `{% include %}`?
+
+Includes are good for static partials. Components become more useful when the caller passes props and body content together. The `children` part is the missing piece.
+
+### Where does this pattern start to hurt?
+
+It starts to hurt when components become global, deeply nested, or full of hidden behavior. Keep them small and local to a template family. The point is readability, not inventing a framework inside templates.
+
+### What is the best use case?
+
+Small UI primitives: buttons, cards, alerts, empty states, table cells, and repeated admin or dashboard fragments. The boring pieces are where this pattern pays rent.

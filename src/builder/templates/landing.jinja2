@@ -5,15 +5,18 @@
   <meta name="google-site-verification" content="CPziVTiDUu4mYTO0W7b63PVGE2YKC5lp7Uz-XiIkEWs" /> {# pragma: allowlist secret #}
   <meta name="description" content="{{ page.description }}" />
   <meta name="author" content="Mario-César Señoranis" />
-  <link rel="canonical" itemProp="url" href="{{ site.url }}{{ page.url if page.url != '/' else '' }}" />
+  <link rel="canonical" itemProp="url" href="{{ canonical_url(site, page) }}" />
   <link rel="author" href="{{ site.url }}" />
   {% if page.title -%}
   <meta name="twitter:title" content="{{ page.title }}" />
   <meta property="og:title" content="{{ page.title }}" />
   <meta property="og:site_name" itemProp="name" content="{{ page.title }}" />
   {% endif -%}
-  <meta property="og:url" content="{{ site.url }}{{ page.url if page.url != '/' else '' }}" />
+  <meta property="og:url" content="{{ canonical_url(site, page) }}" />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="{{ site.image_url }}" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:image" content="{{ site.image_url }}" />
   {% if page.description -%}
   <meta property="og:description" content="{{ page.description }}" />
   <meta name="twitter:description" content="{{ page.description }}" />

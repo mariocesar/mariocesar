@@ -34,8 +34,8 @@ def test_sitemap_uses_content_dates():
             "{http://www.sitemaps.org/schemas/sitemap/0.9}lastmod"
         )
     ]
-    assert "2026-05-03" in lastmods
-    assert "2026-05-02" in lastmods
+    assert lastmods
+    assert set(lastmods) == {"2026-05-03"}
 
 
 def test_rss_includes_articles():
@@ -62,4 +62,22 @@ def test_static_build_writes_expected_files(tmp_path):
 
     homepage = (tmp_path / "index.html").read_text()
     assert "Articles" in homepage
-    assert "/articles/static-websites-are-enough/" in homepage
+    assert "/articles/django-template-components-without-react/" in homepage
+
+
+def test_static_build_writes_seo_metadata(tmp_path):
+    build(tmp_path)
+
+    homepage = (tmp_path / "index.html").read_text()
+    article = (
+        tmp_path
+        / "articles"
+        / "django-admin-actions-should-be-forms"
+        / "index.html"
+    ).read_text()
+    robots = (tmp_path / "robots.txt").read_text()
+
+    assert '<meta property="og:image"' in homepage
+    assert '<meta name="twitter:card" content="summary"' in article
+    assert '"@type": "Article"' in article
+    assert "https://mariocesar.xyz/articles/rss.xml" in robots

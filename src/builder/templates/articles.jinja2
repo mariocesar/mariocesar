@@ -3,7 +3,16 @@
 {% block title %}Articles | Mario-César Señoranis{% endblock %}
 {% block extrahead -%}
   <meta name="description" content="{{ page.description }}" />
-  <link rel="canonical" href="{{ site.url }}/articles/" />
+  <link rel="canonical" href="{{ canonical_url(site, page) }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{ page.title }} | Mario-César Señoranis" />
+  <meta property="og:description" content="{{ page.description }}" />
+  <meta property="og:url" content="{{ canonical_url(site, page) }}" />
+  <meta property="og:image" content="{{ site.image_url }}" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="{{ page.title }} | Mario-César Señoranis" />
+  <meta name="twitter:description" content="{{ page.description }}" />
+  <meta name="twitter:image" content="{{ site.image_url }}" />
 {%- endblock %}
 
 {% block body -%}
