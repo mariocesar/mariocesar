@@ -181,8 +181,17 @@ def iter_files(path: Path):
     if not path.exists():
         return
     for child in path.rglob("*"):
-        if child.is_file() and not child.name.startswith("."):
+        if should_watch(child):
             yield child
+
+
+def should_watch(path: Path) -> bool:
+    return (
+        path.is_file()
+        and not path.name.startswith(".")
+        and "__pycache__" not in path.parts
+        and path.suffix != ".pyc"
+    )
 
 
 def main() -> None:
