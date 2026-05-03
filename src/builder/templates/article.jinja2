@@ -1,0 +1,22 @@
+{% extends "_layouts/base.jinja2" %}
+
+{% block title %}{{ page.title }} | Mario-César Señoranis{% endblock %}
+{% block extrahead -%}
+  {% if page.description -%}
+  <meta name="description" content="{{ page.description }}" />
+  <meta property="og:description" content="{{ page.description }}" />
+  {%- endif %}
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="{{ page.title }}" />
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+{%- endblock %}
+
+{% block body -%}
+  <article class="prose article-page">
+    <header class="article-header">
+      <time datetime="{{ page.lastmod.isoformat() }}">{{ display_date(page.lastmod) }}</time>
+    </header>
+    {{ page.content|safe|indent(4) }}
+  </article>
+{%- endblock %}

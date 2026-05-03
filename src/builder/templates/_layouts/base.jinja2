@@ -19,15 +19,25 @@
   <meta name="theme-color" content="#ffffff">
   <meta name="application-name" content="mariocesar.xyz">
   <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="/static/icons/icon-144.png">
+  <meta name="msapplication-TileImage" content="/static/icons/icon-256.png">
+  <link rel="alternate" type="application/rss+xml" title="Mario-César Señoranis Articles" href="/articles/rss.xml">
 
   {% block extrahead %}{% endblock %}
 </head>
 <body>
-  <header></header>
+  <header class="site-header">
+    <a class="site-brand" href="/">mariocesar.xyz</a>
+    <nav aria-label="Main navigation">
+      <a href="/articles/">Articles</a>
+      <a href="https://github.com/mariocesar" rel="noopener" target="_blank">GitHub</a>
+    </nav>
+  </header>
   <main role="main">
     {% block body -%}{% endblock %}
   </main>
-  <footer></footer>
+  <footer class="site-footer">
+    <a href="/llms.txt">llms.txt</a>
+    <a href="/articles/rss.xml">RSS</a>
+  </footer>
 </body>
 </html>

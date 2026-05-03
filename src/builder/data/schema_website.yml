@@ -18,7 +18,7 @@ mainEntity:
   familyName: Señoranis Ayala
   givenName: Mario César
   jobTitle: Senior Software Engineer
-  image: https://mariocesar.xyz/mariocesar.jpg
+  image: https://mariocesar.xyz/static/icons/icon-512.png
   gender: http://schema.org/Male
   sameAs:
     - https://mariocesar.xyz/
