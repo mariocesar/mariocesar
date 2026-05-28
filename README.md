@@ -1,15 +1,17 @@
 ---
-title: Mario-César Señoranis | Software Developer & CTO in Bolivia
-description: Software developer & CTO in Santa Cruz, Bolivia. I run Humanzilla, build Django apps and API integrations (Zapier), and talk LatAm startups at tuGerente.
+title: Mario-César Señoranis | Senior Software Engineer
+description: Senior Software Engineer and Technical Lead with 9+ years building fullstack platforms in fintech, SaaS, and e-commerce using Python, Django, React, Node.js, AWS, and AI integrations.
 ---
 
 # 👋🏼 Hello, I'm Mario-César Señoranis!
 
-I'm a software developer who writes, builds, and shares what I learn. I run a small software agency, [Humanzilla.com](https://humanzilla.com) with my wife, and I serve as CTO at [tuGerente.com](https://tugerente.com/) a LatAm Startup from Bolivia.
+I'm a Senior Software Engineer and Technical Lead based in Bolivia, with 9+ years of experience building fullstack platforms across fintech, SaaS, and e-commerce. I write, build, and share what I learn.
 
-Earlier, I was on the Integrations teams at [Zapier](https://zapier.com) and at [Tesorio](https://tesorio.com), building app connectors and API integrations, having fun with webhooks, data ingestion, and large-scale workflows across ERPs, billing tools, and CRMs.
+My stack centers on **Python, Django, FastAPI, React, Next.js, and Node.js**, deployed on **AWS** (Lambda, EC2, RDS, Fargate, S3) with **Docker, Kubernetes, and Terraform**. I've led engineering teams, scaled platforms handling millions of transactions, and built AI integrations on top of **OpenAI** and **Claude** for systems with high data volume.
 
-If you have a niche project with Django, Automations, Zapier connectors, ETL pipelines, or legacy upgrades, send us a message on [Humanzilla’s LinkedIn](https://www.linkedin.com/company/humanzilla/). If you want to talk startups in LatAm, especially SMB ops, inventory/POS, team building, and growth, message me on [LinkedIn](https://www.linkedin.com/in/mariocesar).
+I've shipped production work at [Zapier](https://zapier.com), [Tesorio](https://tesorio.com), and [tuGerente](https://tugerente.com/), focused on app connectors, API integrations, ETL pipelines, real-time dashboards, and the kind of legacy-system upgrades that move a business forward. I care about clean ownership of the code, working well with a team, and shipping solid, maintainable solutions.
+
+If you'd like to talk about an opportunity, a project, or just trade notes, reach out on [LinkedIn](https://www.linkedin.com/in/mariocesar).
 
 Welcome to my corner of the internet.
 
