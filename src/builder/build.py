@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import json
-import os
 import shutil
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass
@@ -72,9 +71,6 @@ def template_environment() -> Environment:
     env.globals["display_date"] = display_date
     env.globals["canonical_url"] = canonical_url
     env.globals["article_schema"] = article_schema
-    # Vercel Web Analytics and Speed Insights are served under /_vercel/,
-    # which only exists on Vercel deployments.
-    env.globals["vercel_production"] = os.environ.get("VERCEL_ENV") == "production"
     return env
 
 
